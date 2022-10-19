@@ -2,10 +2,10 @@ package Tagrest_website;
 
 public class Product {
 
-    int product_id;
-    String product_name;
-    String product_color;
-    String product_material;
+    public int product_id;
+    public String product_name;
+    public String product_color;
+    public String product_material;
 
     public String Search_product(String item) {
 

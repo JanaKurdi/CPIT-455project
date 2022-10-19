@@ -2,8 +2,8 @@ package Tagrest_website;
 
 public class Admin implements User {
 
-    String Username;
-    String Password;
+    private String Username;
+    private String Password;
 
     @Override
     public boolean VerifyLogin() {

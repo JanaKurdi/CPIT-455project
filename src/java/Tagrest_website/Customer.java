@@ -2,12 +2,12 @@ package Tagrest_website;
 
 public class Customer implements User {
 
-    String Username;
-    String Password;
-    boolean loginStatus;
-    String Customer_Address;
-    String Customer_phone;
-    String Customer_email;
+    private String Username;
+    private String Password;
+    private boolean loginStatus;
+    private String Customer_Address;
+    private String Customer_phone;
+    private String Customer_email;
 
     public Customer() {
     }

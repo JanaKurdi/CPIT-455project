@@ -2,8 +2,8 @@ package Tagrest_website;
 
 public class PaymentMethod {
 
-    double cost;
-    String paymentDate;
+    private double cost;
+    private String paymentDate;
 
     public double getCost() {
         return cost;
