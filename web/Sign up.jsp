@@ -9,6 +9,8 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- Fav icon-->
+        <link rel="icon" type="image/x-icon" href="./images/Tagrest.jpg" />
         <link href="css/bootstrap.css"rel="stylesheet"type="text/css">
         <title>JSP Page</title>
         <style>

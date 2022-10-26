@@ -1,0 +1,86 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Oct 26, 2022, 12:20:50 AM
+    Author     : mac
+*/
+
+
+.header_section {
+    padding: 0px;
+    text-align: center;
+    background: white;
+    color: white;
+    font-size: 20px;
+}
+
+
+.bg-image {
+    background-image: url('./images/Morocco.jpeg');
+    height: 50vh;
+
+
+}
+
+.layout_padding {
+
+}
+
+.who_taital {
+    padding: 0px;
+    text-align: center;
+    background: white;
+    font-size: 50px;
+
+}
+
+.designer_text {
+    padding: 0px;
+    text-align: center;
+    background: white;
+    font-size: 30px;
+
+}
+
+.tagrest_text {
+    padding: 0px;
+    text-align: center;
+    background: white;
+    font-size: 20px;
+
+}
+
+.copyright_section {
+    background-color: rgba(0, 0, 0, 0.2);
+
+}
+
+.main-slider {
+
+}
+
+
+
+
+.title {
+    padding: 0px;
+    text-align: center;
+    background: #70b2f8;
+    font-size: 50px;
+
+
+
+}
+
+.slide {
+    background:background;
+    width:600px;
+    height: 600px;
+    margin: auto;
+    background: #70b2f8;
+
+
+}
+
