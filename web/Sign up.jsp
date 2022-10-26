@@ -5,110 +5,37 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <!-- Fav icon-->
-        <link rel="icon" type="image/x-icon" href="./images/Tagrest.jpg" />
-        <link href="css/bootstrap.css"rel="stylesheet"type="text/css">
-         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-            
-        <title>JSP Page</title>
-        <style>
+<!-- multistep form -->
+<link rel="stylesheet" href="/CPIT-455project/stylesheetSignUp.css"> <!-- multistep form -->
+<script src="js/SignUpjavascript.js"></script><!-- comment -->
 
-            *{
-                padding: 0;
-                margin: 0;
-                box-sizing: border-box;
+<form id="msform">
+    <!-- progressbar -->
+    <ul id="progressbar">
+        <li class="active">Account Setup</li>
+        <li>Social Profiles</li>
+        <li>Personal Details</li>
+    </ul>
+    <!-- fieldsets -->
+    <fieldset>
+        <h2 class="fs-title">Sign Up</h2>
+        <h3 class="fs-subtitle">This is step 1</h3>
+        <input type="text" name="email" placeholder="Email" />
+        <input type="password" name="pass" placeholder="Password" />
+        <input type="password" name="cpass" placeholder="Confirm Password" />
+        <input type="button" name="next" class="next action-button" value="Next" />
+    </fieldset>
 
-            }
-            body{
-                background-color: rgb(255,255,255);
+    <fieldset>
+        <h2 class="fs-title">Personal Details</h2>
+        <h3 class="fs-subtitle">We will never sell it</h3>
+        <input type="text" name="fname" placeholder="First Name" />
+        <input type="text" name="lname" placeholder="Last Name" />
+        <input type="text" name="id" placeholder="National ID" />
+        <input type="text" name="phone" placeholder="Phone" />
+        <textarea name="address" placeholder="Address"></textarea>
+        <input type="button" name="previous" class="previous action-button" value="Previous" />
+        <input type="submit" name="submit" class="submit action-button" value="Submit" />
+    </fieldset>
+</form>
 
-            }
-        </style>
-
-    </head>
-    <body>
-
-        <div class= "container">
-            <div calss="row">
-
-                <div class ="col-md-6">
-                    <img src="images/signup.jpg" height="400" width="400" alt="Tagrest">
-                </div>
-            </div>
-
-            <div class=" text-left">
-                <script type="text/javascript"scr="js/bootstrap.js"></script>
-                <h1>Sign up</h1>
-            </div>
-
-            <br>
-
-            <div class=" text-left">
-                <input type="text" name="First name" value="" placeholder="Enter your Firstname" />
-            </div>
-            <br>
-
-            <div class=" text-left">
-                <input type="text" name="Last name" value="" placeholder="Enter your Lastname" />
-            </div>
-            <br>
-
-            <div class=" text-left">
-                <input type="text" name="id" value=""placeholder="Enter your national ID" />   
-            </div>
-
-            <br>
-            <div class=" text-left">
-                <input type="text" name="Email" value=""placeholder="Enter your Email" /> 
-            </div>
-            <br>
-
-            <div class=" text-left">
-                <input type="password" name="password" value="" placeholder="Ctreate a password"/> 
-            </div>
-            <br>
-
-            <div class=" text-left">
-                <input type="password" name="re_password" value="" placeholder="Confirm a password"/>   
-            </div>
-            <br>
-
-            <div class=" text-left">
-                <input type="text" name="address" value=""placeholder="Enter your address" />
-            </div>
-            <br>
-
-            <div class=" text-left">
-                <input type="text" name="phonenumber" value=""placeholder="Enter your Phonenumber" /> 
-            </div>
-
-            <br>
-            <div class=" text-left">
-                <div class="checkbox-text">
-                    <div class="checkbox-content">
-                        <input type="checkbox" id="termCon">
-                        <label for="termCon" class="text">I accepted all terms and conditions</label>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <div class=" text-left">
-                <button type="button" class="btn btn-outline-success">SignUp</button>
-            </div>
-            <div class=" text-left">
-                <br>
-                <div class="login-signup">
-                    <span class="text">Already have account?
-                        <a href="#" class="text login-link">Login Now</a>
-                    </span>
-                </div>
-            </div>
-        </div>
-
-    </body>
-</html>
