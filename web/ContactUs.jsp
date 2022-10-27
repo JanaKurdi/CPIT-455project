@@ -7,8 +7,8 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en"> <!--english language-->
-    <html>
-        <head>
+        
+        <head>   
             <!-- basic -->
            <!-- basic -->
             <meta charset="UTF-8">
@@ -49,14 +49,10 @@
                                     <a class="nav-link" href="index.html">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="Shop.html">Shop</a>
+                                    <a class="nav-link" href="Shop.jsp">Shop</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="AboutUs.html">About us</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="ContactUs.jsp">Contact us</a>
-                                </li>
+                   
+                            
                             </ul>
                             <form class="d-flex" role="search">
                                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

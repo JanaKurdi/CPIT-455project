@@ -1,3 +1,9 @@
+<%-- 
+    Document   : Shop
+    Created on : Oct 27, 2022, 3:53:43 PM
+    Author     : duaas
+--%>
+
 <!DOCTYPE html>
 <html lang="en"> <!--english language-->
     <html>
@@ -16,14 +22,15 @@
             <!-- Responsive-->
             <link rel="stylesheet" href="css/responsive.css">
             <!-- Scrollbar Custom CSS -->
-            <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
-            <link rel="stylesheet" href="stylesheetHome.css" type="text/css"/>
+            <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css" type="text/css"/>
+            <link rel="stylesheet" href="stylesheetShop.css" type="text/css"/>
             <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
-            <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+            <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
             <link rel="stylesheet" href="css/bootstrap-reboot.css" type="text/css"/>
-            <link rel="stylesheet" href="css/bootstrap-grid.min.css" type="text/css">
             <link rel="stylesheet" href="css/bootstrap-grid.min.css" type="text/css"/>
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+            <link rel="stylesheet" href="css/bootstrap-grid.min.css" type="text/css"/>
+                      
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 
@@ -43,12 +50,8 @@
                                 <li class="nav-item">
                                     <a class="navbar-brand" href="#">Tagrest</a>
                                 </li>
-
                                 <li class="nav-item">
-                                    <a class="nav-link" href="Shop.jsp">Shop</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#AboutUs">About us</a>
+                                    <a class="nav-link" href="index.html">Home</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="ContactUs.jsp">Contact us</a>
@@ -73,14 +76,8 @@
 
                 <div class="d-flex justify-content-center align-items-center h-100">
                     <div class="text-white">
-                        <h1 class="mb-3">TAGREST</h1>
+                        <h1 class="mb-3">TAGREST </h1>
                         <h5 class="mb-4">New Clothes, New Passion</h5>
-
-                        <a class="btn btn btn-light btn-lg m-2" href="Login.jsp">Login</a
-                        >
-                        <a class="btn btn-outline-light btn-lg m-2" href="Sign up.jsp">Signup</a
-
-                        >
                     </div>
                 </div>
             </div>
@@ -88,50 +85,35 @@
             <br>
             <!-- end of Background banner -->
 
-
-            <!-- who we are section-->
-            <div class="who_section layout_padding" id="AboutUs">
-                <div class="container">
-                    <h1 class="who_taital">WHO WE ARE ?</h1>
-                    <br>
-                    <h4 class="designer_text"> MOROCCAN JACKETS </h4>
-                    <p class="tagrest_text">Nowadays the lifestyle of the people is different. People like to wear different and unique clothes that might not be selling in their countries. So here is the idea of targets website born where you can find your stylish moroccan jackets.</p>
-                </div>
-            </div>
-            <!-- end of who we are section-->
-
-            <!-- our product section-->
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <div class="main-slider">
-                            <hr id="hr">
-                            <h2 class="title p-5 text-center"> OUR PRODUCTS </h2>
-                            <br>
-                            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <img src="./images/unisexmoroccanjackets1.jpeg" class="d-block w-100" alt="...">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="./images/unisexmoroccanjackets2.jpeg" class="d-block w-100" alt="...">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="./images/unisexmoroccanjackets3.jpeg" class="d-block w-100" alt="...">
-                                    </div>
-                                </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="content">
+                 
+	<li class="item">
+				
+            <div><img src="./images/unisexmoroccanjackets1.jpeg" alt="">
+				<p class="item-description">This is an item description. Interesting content about the item will go here.</p>
+				<h4 class="item-name">Item Name</h4>
+                                <h5 class="item-price">$<span class="price">50.00</span></h5> </div>
+                                
+                                <button type="button" class="btn btn-outline-primary">Add to cart</button>
+			</li>
+                        	<li class="item">
+				
+				 <div><img src="./images/unisexmoroccanjackets2.jpeg" alt="">
+				<p class="item-description">This is an item description. Interesting content about the item will go here.</p>
+				<h4 class="item-name">Item Name</h4>
+				<h5 class="item-price">$<span class="price">50.00</span></h5></div>
+                                
+                                <button type="button" class="btn btn-outline-primary">Add to cart</button>
+			</li>
+                        	<li class="item">
+				
+				 <div><img src="./images/unisexmoroccanjackets3.jpeg" alt="">
+				<p class="item-description">This is an item description. Interesting content about the item will go here.</p>
+				<h4 class="item-name">Item Name</h4>
+				<h5 class="item-price">$<span class="price">50.00</span></h5></div>
+                                
+                                <button type="button" class="btn btn-outline-primary">Add to cart</button>
+                                </li>
             </div>
             <!-- end of our product section-->
             <br><br><br><br>
@@ -142,7 +124,7 @@
                 <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
                     <img src="images/socialmedia.png" width="80" height="50" alt="socialmedia"/>
                     <br>
-                    Â© 2022 Copyright:
+                    © 2022 Copyright:
                     <a class="text-dark"> Design by Doaa , Jana , Razan , and Renad</a>
                 </div>
                 <!-- Copyright -->
