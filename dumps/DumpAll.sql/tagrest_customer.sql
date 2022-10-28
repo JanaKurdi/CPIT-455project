@@ -30,7 +30,11 @@ CREATE TABLE `customer` (
   `email` varchar(100) DEFAULT NULL,
   `Address` varchar(255) DEFAULT NULL,
   `phone` varchar(22) DEFAULT NULL,
-  PRIMARY KEY (`username`)
+  `OrderNum` varchar(22) DEFAULT NULL,
+  PRIMARY KEY (`username`),
+  UNIQUE KEY `idx_customer_OrderNum` (`OrderNum`),
+  KEY `OrderN_idx` (`OrderNum`),
+  CONSTRAINT `OrderN` FOREIGN KEY (`OrderNum`) REFERENCES `orders` (`Order_number`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -40,7 +44,7 @@ CREATE TABLE `customer` (
 
 LOCK TABLES `customer` WRITE;
 /*!40000 ALTER TABLE `customer` DISABLE KEYS */;
-INSERT INTO `customer` VALUES ('Lina','Alshaikh','Linaalsh','abcdefg','linaalshaikh2002@gmail.com','Jeddah','0503589589'),('Razan','Alshaikh','razanalsh','a@1906813','RazanAlshaikh2000@gmail.com','Jeddah','0549226961');
+INSERT INTO `customer` VALUES ('Lina','Alshaikh','Linaalsh','abcdefg','linaalshaikh2002@gmail.com','Jeddah','0503589589','12'),('Razan','Alshaikh','razanalsh','a@1906813','RazanAlshaikh2000@gmail.com','Jeddah','0549226961','11');
 /*!40000 ALTER TABLE `customer` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-10-25  1:24:52
+-- Dump completed on 2022-10-28  5:51:28

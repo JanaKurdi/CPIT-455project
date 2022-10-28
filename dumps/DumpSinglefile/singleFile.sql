@@ -54,7 +54,11 @@ CREATE TABLE `customer` (
   `email` varchar(100) DEFAULT NULL,
   `Address` varchar(255) DEFAULT NULL,
   `phone` varchar(22) DEFAULT NULL,
-  PRIMARY KEY (`username`)
+  `OrderNum` varchar(22) DEFAULT NULL,
+  PRIMARY KEY (`username`),
+  UNIQUE KEY `idx_customer_OrderNum` (`OrderNum`),
+  KEY `OrderN_idx` (`OrderNum`),
+  CONSTRAINT `OrderN` FOREIGN KEY (`OrderNum`) REFERENCES `orders` (`Order_number`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -64,31 +68,53 @@ CREATE TABLE `customer` (
 
 LOCK TABLES `customer` WRITE;
 /*!40000 ALTER TABLE `customer` DISABLE KEYS */;
-INSERT INTO `customer` VALUES ('Lina','Alshaikh','Linaalsh','abcdefg','linaalshaikh2002@gmail.com','Jeddah','0503589589'),('Razan','Alshaikh','razanalsh','a@1906813','RazanAlshaikh2000@gmail.com','Jeddah','0549226961');
+INSERT INTO `customer` VALUES ('Lina','Alshaikh','Linaalsh','abcdefg','linaalshaikh2002@gmail.com','Jeddah','0503589589','12'),('Razan','Alshaikh','razanalsh','a@1906813','RazanAlshaikh2000@gmail.com','Jeddah','0549226961','11');
 /*!40000 ALTER TABLE `customer` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `order`
+-- Temporary view structure for view `customers_orders`
 --
 
-DROP TABLE IF EXISTS `order`;
+DROP TABLE IF EXISTS `customers_orders`;
+/*!50001 DROP VIEW IF EXISTS `customers_orders`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `customers_orders` AS SELECT 
+ 1 AS `OrderNum`,
+ 1 AS `Fname`,
+ 1 AS `lname`,
+ 1 AS `email`,
+ 1 AS `Address`,
+ 1 AS `phone`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Table structure for table `orders`
+--
+
+DROP TABLE IF EXISTS `orders`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `order` (
-  `Order_Amount` int DEFAULT NULL,
-  `Order_number` int NOT NULL,
-  PRIMARY KEY (`Order_number`)
+CREATE TABLE `orders` (
+  `Order_Amount` varchar(22) DEFAULT NULL,
+  `Order_number` varchar(22) NOT NULL,
+  `Order_Customer` varchar(22) DEFAULT NULL,
+  PRIMARY KEY (`Order_number`),
+  UNIQUE KEY `idx_orders_Order_number` (`Order_number`),
+  KEY `Order_Customer` (`Order_Customer`),
+  CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`Order_Customer`) REFERENCES `customer` (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `order`
+-- Dumping data for table `orders`
 --
 
-LOCK TABLES `order` WRITE;
-/*!40000 ALTER TABLE `order` DISABLE KEYS */;
-/*!40000 ALTER TABLE `order` ENABLE KEYS */;
+LOCK TABLES `orders` WRITE;
+/*!40000 ALTER TABLE `orders` DISABLE KEYS */;
+INSERT INTO `orders` VALUES ('3','11','razanalsh'),('4','12','linaalsh');
+/*!40000 ALTER TABLE `orders` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -139,6 +165,24 @@ LOCK TABLES `product_category` WRITE;
 /*!40000 ALTER TABLE `product_category` DISABLE KEYS */;
 /*!40000 ALTER TABLE `product_category` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Final view structure for view `customers_orders`
+--
+
+/*!50001 DROP VIEW IF EXISTS `customers_orders`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`C3A_3`@`%` SQL SECURITY DEFINER */
+/*!50001 VIEW `customers_orders` AS select `customer`.`OrderNum` AS `OrderNum`,`customer`.`Fname` AS `Fname`,`customer`.`lname` AS `lname`,`customer`.`email` AS `email`,`customer`.`Address` AS `Address`,`customer`.`phone` AS `phone` from `customer` */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -149,4 +193,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-10-25  1:25:44
+-- Dump completed on 2022-10-28  5:52:35

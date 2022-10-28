@@ -16,26 +16,31 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `order`
+-- Table structure for table `orders`
 --
 
-DROP TABLE IF EXISTS `order`;
+DROP TABLE IF EXISTS `orders`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `order` (
-  `Order_Amount` int DEFAULT NULL,
-  `Order_number` int NOT NULL,
-  PRIMARY KEY (`Order_number`)
+CREATE TABLE `orders` (
+  `Order_Amount` varchar(22) DEFAULT NULL,
+  `Order_number` varchar(22) NOT NULL,
+  `Order_Customer` varchar(22) DEFAULT NULL,
+  PRIMARY KEY (`Order_number`),
+  UNIQUE KEY `idx_orders_Order_number` (`Order_number`),
+  KEY `Order_Customer` (`Order_Customer`),
+  CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`Order_Customer`) REFERENCES `customer` (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `order`
+-- Dumping data for table `orders`
 --
 
-LOCK TABLES `order` WRITE;
-/*!40000 ALTER TABLE `order` DISABLE KEYS */;
-/*!40000 ALTER TABLE `order` ENABLE KEYS */;
+LOCK TABLES `orders` WRITE;
+/*!40000 ALTER TABLE `orders` DISABLE KEYS */;
+INSERT INTO `orders` VALUES ('3','11','razanalsh'),('4','12','linaalsh');
+/*!40000 ALTER TABLE `orders` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -47,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-10-25  1:24:52
+-- Dump completed on 2022-10-28  5:51:28
