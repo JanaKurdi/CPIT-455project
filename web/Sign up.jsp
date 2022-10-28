@@ -4,38 +4,59 @@
     Author     : renad
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!-- multistep form -->
+<link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+<link rel="icon" type="image/x-icon" href="./images/Tagrest.jpg" />
 <link rel="stylesheet" href="/CPIT-455project/stylesheetSignUp.css"> <!-- multistep form -->
 <script src="js/SignUpjavascript.js"></script><!-- comment -->
+<!-- Favicon-->
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+<!-- Font Awesome icons (free version)-->
+<script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+crossorigin="anonymous"></script>
+<!-- Google fonts-->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+      rel="stylesheet" type="text/css" />
+<link
+    href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic"
+    rel="stylesheet" type="text/css" />
+<!-- Core theme CSS (includes Bootstrap)-->
+<link href="css/index-styles.css" rel="stylesheet" />
+<main>
 
-<form id="msform">
-    <!-- progressbar -->
-    <ul id="progressbar">
-        <li class="active">Account Setup</li>
-        <li>Social Profiles</li>
-        <li>Personal Details</li>
-    </ul>
-    <!-- fieldsets -->
-    <fieldset>
-        <h2 class="fs-title">Sign Up</h2>
-        <h3 class="fs-subtitle">This is step 1</h3>
-        <input type="text" name="email" placeholder="Email" />
-        <input type="password" name="pass" placeholder="Password" />
-        <input type="password" name="cpass" placeholder="Confirm Password" />
-        <input type="button" name="next" class="next action-button" value="Next" />
-    </fieldset>
+    <figure>
+        <picture>
+            <img src="images/signup.jpg"/>
+        </picture>
+    </figure>
+    <div class="headline">
+        <h2 class="text-headline">SIGN UP</h2>
+    </div>
+    <form name="Login_Form" action="SignUpConfirmation.jsp" method="POST">
+        <span>
+            <label for="firstname" class="text-small-uppercase"></label>
+            <input class="text-body" id="firstname" name="First name" type="text" placeholder="Enter your First name">
+        </span>
+        <span>
+            <label for="lastname" class="text-small-uppercase"></label>
+            <input class="text-body" id="lastname" name="email" type="text" placeholder="Enter your Last name">
+        </span>
+        <span>
+            <label for="email" class="text-small-uppercase"></label>
+            <input class="text-body" id="email" name="email" type="email" placeholder="Enter your Email">
+        </span>
+        <span>
+            <label for="password" class="text-small-uppercase"></label>
+            <input class="text-body" id="password" name="password" type="password" placeholder="Enter correct password">
+        </span>
+        <span>
+            <label for="re-password" class="text-small-uppercase"></label>
+            <input class="text-body" id="password" name="password" type="password" placeholder="Cnofirm you password">
+        </span>
+        <span>
+            <label for="phone" class="text-small-uppercase"></label>
+            <input class="text-body" id="phone" name="phone" type="text" placeholder="Enter your Phone Number">
+        </span>
 
-    <fieldset>
-        <h2 class="fs-title">Personal Details</h2>
-        <h3 class="fs-subtitle">We will never sell it</h3>
-        <input type="text" name="fname" placeholder="First Name" />
-        <input type="text" name="lname" placeholder="Last Name" />
-        <input type="text" name="id" placeholder="National ID" />
-        <input type="text" name="phone" placeholder="Phone" />
-        <textarea name="address" placeholder="Address"></textarea>
-        <input type="button" name="previous" class="previous action-button" value="Previous" />
-        <input type="submit" name="submit" class="submit action-button" value="Submit" />
-    </fieldset>
-</form>
-
+        <input class="text-small-uppercase" id="submit" type="submit" value="SIGN UP">
+    </form>
+</main>

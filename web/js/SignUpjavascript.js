@@ -5,80 +5,51 @@
  */
 
 
-var current_fs, next_fs, previous_fs;
-var left, opacity, scale;
-var animating;
+var inputs = document.querySelectorAll('input[type=text], input[type=email],input[type=password]');
+for (i = 0; i < inputs.length; i++) {
+    var inputEl = inputs[i];
+    if (inputEl.value.trim() !== '') {
+        inputEl.parentNode.classList.add('input--filled');
+    }
+    inputEl.addEventListener('focus', onFocus);
+    inputEl.addEventListener('blur', onBlur);
+}
 
-$(".next").click(function () {
-    if (animating)
-        return false;
-    animating = true;
+function onFocus(ev) {
+    ev.target.parentNode.classList.add('inputs--filled');
+}
 
-    current_fs = $(this).parent();
-    next_fs = $(this).parent().next();
+function onBlur(ev) {
+    if (ev.target.value.trim() === '') {
+        ev.target.parentNode.classList.remove('inputs--filled');
+    } else if (ev.target.checkValidity() == false) {
+        ev.target.parentNode.classList.add('inputs--invalid');
+        ev.target.addEventListener('input', liveValidation);
+    } else if (ev.target.checkValidity() == true) {
+        ev.target.parentNode.classList.remove('inputs--invalid');
+        ev.target.addEventListener('input', liveValidation);
+    }
+}
 
-    $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+function liveValidation(ev) {
+    if (ev.target.checkValidity() == false) {
+        ev.target.parentNode.classList.add('inputs--invalid');
+    } else {
+        ev.target.parentNode.classList.remove('inputs--invalid');
+    }
+}
 
-    next_fs.show();
-    current_fs.animate({opacity: 0}, {
-        step: function (now, mx) {
+var submitBtn = document.querySelector('input[type=submit]');
+submitBtn.addEventListener('click', onSubmit);
 
-            scale = 1 - (1 - now) * 0.2;
-
-            left = (now * 50) + "%";
-
-            opacity = 1 - now;
-            current_fs.css({
-                'transform': 'scale(' + scale + ')',
-                'position': 'absolute'
-            });
-            next_fs.css({'left': left, 'opacity': opacity});
-        },
-        duration: 800,
-        complete: function () {
-            current_fs.hide();
-            animating = false;
-        },
-
-        easing: 'easeInOutBack'
-    });
-});
-
-$(".previous").click(function () {
-    if (animating)
-        return false;
-    animating = true;
-
-    current_fs = $(this).parent();
-    previous_fs = $(this).parent().prev();
-
-
-    $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
-
-
-    previous_fs.show();
-
-    current_fs.animate({opacity: 0}, {
-        step: function (now, mx) {
-
-            scale = 0.8 + (1 - now) * 0.2;
-
-            left = ((1 - now) * 50) + "%";
-
-            opacity = 1 - now;
-            current_fs.css({'left': left});
-            previous_fs.css({'transform': 'scale(' + scale + ')', 'opacity': opacity});
-        },
-        duration: 800,
-        complete: function () {
-            current_fs.hide();
-            animating = false;
-        },
-
-        easing: 'easeInOutBack'
-    });
-});
-
-$(".submit").click(function () {
-    return false;
-})
+function onSubmit(ev) {
+    var inputsWrappers = ev.target.parentNode.querySelectorAll('span');
+    for (i = 0; i < inputsWrappers.length; i++) {
+        input = inputsWrappers[i].querySelector('input[type=text], input[type=email],input[type=password]');
+        if (input.checkValidity() == false) {
+            inputsWrappers[i].classList.add('inputs--invalid');
+        } else if (input.checkValidity() == true) {
+            inputsWrappers[i].classList.remove('inputs--invalid');
+        }
+    }
+}
