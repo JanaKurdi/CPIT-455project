@@ -55,7 +55,6 @@ crossorigin="anonymous"></script>
             <label for="phone" class="text-small-uppercase"></label>
             <input class="text-body" id="phone" name="phone" type="text" placeholder="Enter your Phone Number">
         </span>
-
         <input class="text-small-uppercase" id="submit" type="submit" value="SIGN UP">
     </form>
 </main>

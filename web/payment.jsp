@@ -226,7 +226,7 @@ crossorigin="anonymous"></script>
                                         <a href="CkeckOut.jsp"> <button type="button" class="btn btn-primary btn-block btn-lg" style= "background-color: #8b67ce">PLACE ORDER</button></a>
 
                                         <h5 class="fw-bold mb-4" style="position: absolute; bottom: 9;">
-                                            <a href="index.html"><i class="fas fa-long-arrow-alt-left me-2"></i>Back to shopping</a>
+                                            <a href="Shop.jsp"><i class="fas fa-long-arrow-alt-left me-2"></i>Back to shopping</a>
                                         </h5>
 
                                     </form>

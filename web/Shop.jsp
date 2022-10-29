@@ -92,7 +92,7 @@
             <div><img src="./images/unisexmoroccanjackets1.jpeg" alt="">
 				<p class="item-description">This is an item description. Interesting content about the item will go here.</p>
 				<h4 class="item-name">Item Name</h4>
-                                <h5 class="item-price">$<span class="price">50.00</span></h5> </div>
+                                <h5 class="item-price">500<span class="price"> SR</span></h5> </div>
                                 
                                 <button type="button" class="btn btn-outline-primary">Add to cart</button>
 			</li>
@@ -101,7 +101,7 @@
 				 <div><img src="./images/unisexmoroccanjackets2.jpeg" alt="">
 				<p class="item-description">This is an item description. Interesting content about the item will go here.</p>
 				<h4 class="item-name">Item Name</h4>
-				<h5 class="item-price">$<span class="price">50.00</span></h5></div>
+				<h5 class="item-price">500<span class="price"> SR</span></h5></div>
                                 
                                 <button type="button" class="btn btn-outline-primary">Add to cart</button>
 			</li>
@@ -110,7 +110,7 @@
 				 <div><img src="./images/unisexmoroccanjackets3.jpeg" alt="">
 				<p class="item-description">This is an item description. Interesting content about the item will go here.</p>
 				<h4 class="item-name">Item Name</h4>
-				<h5 class="item-price">$<span class="price">50.00</span></h5></div>
+				<h5 class="item-price">500<span class="price"> SR</span></h5></div>
                                 
                                 <button type="button" class="btn btn-outline-primary">Add to cart</button>
                                 </li>
