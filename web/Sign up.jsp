@@ -22,7 +22,6 @@ crossorigin="anonymous"></script>
 <!-- Core theme CSS (includes Bootstrap)-->
 <link href="css/index-styles.css" rel="stylesheet" />
 <main>
-
     <figure>
         <picture>
             <img src="images/signup.jpg"/>
