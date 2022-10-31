@@ -117,20 +117,9 @@ crossorigin="anonymous"></script>
                         <li class="nav-item">
                             <a class="nav-link" href="index.html">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Shop.html">Shop</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="AboutUs.html">About us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="ContactUs.jsp">Contact us</a>
-                        </li>
+                       
                     </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn btn-light" type="submit">Search</button>
-                    </form>
+                
                 </div>
             </nav>
         </div>

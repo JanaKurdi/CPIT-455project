@@ -46,20 +46,9 @@ crossorigin="anonymous"></script>
                             <li class="nav-item">
                                 <a class="nav-link" href="index.html">Home</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="Shop.html">Shop</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="AboutUs.html">About us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="ContactUs.jsp">Contact us</a>
-                            </li>
+                          
                         </ul>
-                        <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn btn-light" type="submit">Search</button>
-                        </form>
+                       
                     </div>
                 </nav>
             </div>
@@ -109,7 +98,9 @@ crossorigin="anonymous"></script>
                     </div>
                 </div>
                 <a href="SeccessfullyPayment.jsp"> <button type="button" class="btn btn-primary btn-block btn-lg" style= "background-color: #8b67ce">CHECKOUT</button></a>
-
+ <h5 class="fw-bold mb-4" style="position: absolute; bottom: 9;">
+                                            <a href="payment.jsp"><i class="fas fa-long-arrow-alt-left me-2"></i>Back to shopping cart</a>
+                                        </h5>
             </form>
         </div>
         <footer class="text-center text-white">

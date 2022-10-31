@@ -33,7 +33,12 @@
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<style type="text/css">
+.fa_custom {
+color: #0099CC
+}
+</style>
         </head>
         <body>
             <!-- navigation bar section  --> 
@@ -56,13 +61,19 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="ContactUs.jsp">Contact us</a>
                                 </li>
+                                
+                            
+                                <a href="payment.jsp">  <i class="fa fa-shopping-cart fa_custom fa-2x"></i></a>
+                                
+                                
                             </ul>
-                            <form class="d-flex" role="search">
-                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn btn-light" type="submit">Search</button>
-                            </form>
-                        </div>
+                           
+ 
+  </div>
+  
+                      
                     </nav>
+                      </div>
                 </div>
             </div>
             <!-- end of navigation bar section  --> 
@@ -90,29 +101,28 @@
 	<li class="item">
 				
             <div><img src="./images/unisexmoroccanjackets1.jpeg" alt="">
-				<p class="item-description">This is an item description. Interesting content about the item will go here.</p>
-				<h4 class="item-name">Item Name</h4>
+				<p class="item-description">Moroccan Vintage Jacket.</p>
+				<h4 class="item-name">Jacket</h4>
                                 <h5 class="item-price">500<span class="price"> SR</span></h5> </div>
                                 
-                                <button type="button" class="btn btn-outline-primary">Add to cart</button>
+                                <a href="payment.jsp">  <button type="button" class="btn btn-outline-primary">Add to cart</button> </a>
 			</li>
                         	<li class="item">
 				
 				 <div><img src="./images/unisexmoroccanjackets2.jpeg" alt="">
-				<p class="item-description">This is an item description. Interesting content about the item will go here.</p>
-				<h4 class="item-name">Item Name</h4>
+				<p class="item-description">Traditional Moroccan Brown Jacket.</p>
+				<h4 class="item-name">Jacket</h4>
 				<h5 class="item-price">500<span class="price"> SR</span></h5></div>
-                                
-                                <button type="button" class="btn btn-outline-primary">Add to cart</button>
+                                 <a href="payment.jsp">  <button type="button" class="btn btn-outline-primary">Add to cart</button> </a>
 			</li>
                         	<li class="item">
 				
 				 <div><img src="./images/unisexmoroccanjackets3.jpeg" alt="">
-				<p class="item-description">This is an item description. Interesting content about the item will go here.</p>
-				<h4 class="item-name">Item Name</h4>
+				<p class="item-description">Moroccan Winter Jacket With Bohemian Style.</p>
+				<h4 class="item-name">Jacket</h4>
 				<h5 class="item-price">500<span class="price"> SR</span></h5></div>
                                 
-                                <button type="button" class="btn btn-outline-primary">Add to cart</button>
+                                 <a href="payment.jsp">  <button type="button" class="btn btn-outline-primary">Add to cart</button> </a>
                                 </li>
             </div>
             <!-- end of our product section-->

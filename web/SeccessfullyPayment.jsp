@@ -98,42 +98,8 @@ crossorigin="anonymous"></script>
             }
         </style>
 
-    </head>
-    <div class="header_section">
-        <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <img src="./images/Tagrest.jpg" width="60" height="60" class=" rounded-circle d-inline-block align-top text-light" alt="">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="navbar-brand" href="#">Tagrest</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Shop.html">Shop</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="AboutUs.html">About us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="ContactUs.jsp">Contact us</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn btn-light" type="submit">Search</button>
-                    </form>
-                </div>
-            </nav>
-        </div>
-    </div>
-    <br>
+   
+   
     <body style="background-color: #ffffff;">
 
         <!-- start body -->

@@ -109,8 +109,8 @@ main {
 }
 
 body {
-    background: linear-gradient(rgba(108, 90, 181, 0.6), rgba(90,181,176,0.6));
-    font: 700 16px 'Montserrat', sans-serif;
+    background: linear-gradient(rgba(0, 0, 255, 0.7) , rgba(0,191,255,0.7));
+    font: 700 16px 'Georgia', sans-serif;
 }
 
 input[type=email],input[type=text],input[type=password] {
@@ -181,44 +181,45 @@ main {
 }
 
 .text-headline {
-    color: #74bdb7;
+    color: #9370DB;
     letter-spacing: 0.10rem;/* من هنا اعدل تقارب كلمه sign up**/
-    font: 700 1.4em 'Montserrat';
+    font: 700 1.4em 'Times New Roman ';
     text-align: center;
     text-transform: uppercase;
 }
 
 @media (min-width: 768px) {
     .text-headline {
-        font: 700 1.625rem 'Montserrat';
+        font: 700 1.625rem 'Georgia';
     }
 }
 
 .text-body {
     color: #354c58;
-    font: 700 16px 'Montserrat', sans-serif;
+    font: 400 16px 'Georgia', sans-serif;
+    padding-bottom: 10px;
 }
 
 .text-small-uppercase {
-    color: #74bdb7;
-    font: 700 .75rem 'Montserrat';
+    color: #0000CD;
+    font: 700 .75rem 'Georgia';
     letter-spacing: .08rem;
     text-transform: uppercase;
 }
 
 .text-subheadline {
-    color: #f37b56;
-    left: -.17rem;
+    color: #0000FF;
     letter-spacing: .143rem;
-    font: 700 0.652rem 'Montserrat';
+    font: 700 0.652rem 'Georgia';
     margin-bottom: 1.5rem;
     position: relative;
     text-align: center;
     text-transform: uppercase;
+    
 }
 
 @media (min-width: 768px) {
     .text-subheadline {
-        font: 700 0.75rem 'Montserrat';
+        font: 700 0.75rem 'Georgia';
     }
 }
