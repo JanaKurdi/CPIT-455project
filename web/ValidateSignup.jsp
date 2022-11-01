@@ -22,12 +22,15 @@
                 if (password != null && password.length() >= 5) {
                    if(confPassword==password){
                      if(phone!=null && phone.length()==10 && phone.matches("(05)?[0,3,4,5,6,9][0-9]{7}")){
-                     Database.Database_connection user1 = new Database.Database_connection();
-                     ResultSet result = null;
-                     if (result.next()) {
-                      response.sendRedirect("SignUpConfirmation.jsp");
+                     Database.Database_connection user = new Database.Database_connection();
+                     ResultSet result = user.insertUser(FirstName,LasttName,email,password,phone);
+                    if (result.next()) {
+                      out.print("Welcome " + FirstName+" "+ LasttName);
+                    out.println("<a href='SignUpConfirmation.jsp'> Show </a>");
+                   response.sendRedirect("SignUpConfirmation.jsp");
+
            }else {
-                        out.print(FirstName+" "+ LasttName+ " you enterd wrong entry ");
+                       out.print(FirstName+" "+ LasttName+ " you enterd wrong entry ");
             }
 
             }else{
