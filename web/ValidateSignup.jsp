@@ -23,7 +23,7 @@
                    if(confPassword==password){
                      if(phone!=null && phone.length()==10 && phone.matches("(05)?[0,3,4,5,6,9][0-9]{7}")){
                      Database.Database_connection user1 = new Database.Database_connection();
-                     ResultSet result = user1.insertUser(FirstName,LasttName,email,password,phone);
+                     ResultSet result = null;
                      if (result.next()) {
                       response.sendRedirect("SignUpConfirmation.jsp");
            }else {
