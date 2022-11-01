@@ -1,5 +1,5 @@
 <%-- 
-    Document   : Sign up
+    Document   : Signup
     Created on : Oct 24, 2022, 6:51:04 PM
     Author     : renad
 --%>
