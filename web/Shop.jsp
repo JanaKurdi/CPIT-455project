@@ -65,7 +65,7 @@ color: #0099CC
                                <a href="payment.jsp">  <i class="fa fa-shopping-cart fa_custom fa-2x"></i></a>
                             </ul>
                            
-                        </div>
+                         </div>
                     </nav>
                 </div>
             </div>
