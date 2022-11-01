@@ -6,7 +6,7 @@
 
 <!DOCTYPE html>
 <html lang="en"> <!--english language-->
-    <html>
+    
         <head>
             <!-- basic -->
             <meta charset="UTF-8">
@@ -23,22 +23,23 @@
             <link rel="stylesheet" href="css/responsive.css">
             <!-- Scrollbar Custom CSS -->
             <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css" type="text/css"/>
-            <link rel="stylesheet" href="stylesheetShop.css" type="text/css"/>
+            <link rel="stylesheet" href="stylesheetHome.css" type="text/css"/>
             <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
-            <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
+            <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
             <link rel="stylesheet" href="css/bootstrap-reboot.css" type="text/css"/>
             <link rel="stylesheet" href="css/bootstrap-grid.min.css" type="text/css"/>
             <link rel="stylesheet" href="css/bootstrap-grid.min.css" type="text/css"/>
-                      
+
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <style type="text/css">
 .fa_custom {
 color: #0099CC
 }
 </style>
+
         </head>
         <body>
             <!-- navigation bar section  --> 
@@ -61,19 +62,11 @@ color: #0099CC
                                 <li class="nav-item">
                                     <a class="nav-link" href="ContactUs.jsp">Contact us</a>
                                 </li>
-                                
-                            
-                                <a href="payment.jsp">  <i class="fa fa-shopping-cart fa_custom fa-2x"></i></a>
-                                
-                                
+                               <a href="payment.jsp">  <i class="fa fa-shopping-cart fa_custom fa-2x"></i></a>
                             </ul>
                            
- 
-  </div>
-  
-                      
+                        </div>
                     </nav>
-                      </div>
                 </div>
             </div>
             <!-- end of navigation bar section  --> 
@@ -88,7 +81,8 @@ color: #0099CC
                 <div class="d-flex justify-content-center align-items-center h-100">
                     <div class="text-white">
                         <h1 class="mb-3">TAGREST </h1>
-                        <h5 class="mb-4">New Clothes, New Passion</h5>
+                        <br> <br>
+                        <h5 class="mb-4">Enjoy Your Shopping Experience</h5>
                     </div>
                 </div>
             </div>
@@ -96,40 +90,57 @@ color: #0099CC
             <br>
             <!-- end of Background banner -->
 
-            <div class="content">
-                 
-	<li class="item">
-				
-            <div><img src="./images/unisexmoroccanjackets1.jpeg" alt="">
-				<p class="item-description">Moroccan Vintage Jacket.</p>
-				<h4 class="item-name">Jacket</h4>
-                                <h5 class="item-price">500<span class="price"> SR</span></h5> </div>
-                                
-                                <a href="payment.jsp">  <button type="button" class="btn btn-outline-primary">Add to cart</button> </a>
-			</li>
-                        	<li class="item">
-				
-				 <div><img src="./images/unisexmoroccanjackets2.jpeg" alt="">
-				<p class="item-description">Traditional Moroccan Brown Jacket.</p>
-				<h4 class="item-name">Jacket</h4>
-				<h5 class="item-price">500<span class="price"> SR</span></h5></div>
-                                 <a href="payment.jsp">  <button type="button" class="btn btn-outline-primary">Add to cart</button> </a>
-			</li>
-                        	<li class="item">
-				
-				 <div><img src="./images/unisexmoroccanjackets3.jpeg" alt="">
-				<p class="item-description">Moroccan Winter Jacket With Bohemian Style.</p>
-				<h4 class="item-name">Jacket</h4>
-				<h5 class="item-price">500<span class="price"> SR</span></h5></div>
-                                
-                                 <a href="payment.jsp">  <button type="button" class="btn btn-outline-primary">Add to cart</button> </a>
-                                </li>
-            </div>
+
+    <section class="Blog" id="Blog">
+        
+        <div class="content">
+
+            <div class="card">
+                <div class="image">
+                    <img src="images/unisexmoroccanjackets1.jpeg"/>
+                </div>
+                <div class="Blog-Info">
+                    <p class="Blog-title">Moroccan vintage jacket</p>
+                    <strong class="Blog-Subtitle">
+                        <a href="payment.jsp" class="More-details">Add to cart</a>
+                            <a class="pr"> 500 SAR </a>
+                    </strong>
+                </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="images/unisexmoroccanjackets2.jpeg"/>
+                    </div>
+                    <div class="Blog-Info">
+                        <p class="Blog-title">Traditional Moroccan Jacket</p>
+                        <strong class="Blog-Subtitle">
+                            <a href="payment.jsp" class="More-details">Add to cart</a>
+                            <a class="pr"> 500 SAR </a>
+                        </strong>
+                    </div>
+                </div>
+                            <div class="card">
+                    <div class="image">
+                        <img src="images/unisexmoroccanjackets3.jpeg"/>
+                    </div>
+                    <div class="Blog-Info">
+                        <p class="Blog-title">Moroccan bohemian style Jacket</p>
+                        <strong class="Blog-Subtitle">
+                            <a href="payment.jsp" class="More-details">Add to cart</a>
+                                <a class="pr"> 500 SAR </a>
+                        </strong>
+                    </div>
+                </div>
+
+        </div>
+
+    </section>
             <!-- end of our product section-->
             <br><br><br><br>
 
             <!-- copyright section -->
 
+            <section class="footer">
             <footer class="text-center text-white">
                 <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
                     <img src="images/socialmedia.png" width="80" height="50" alt="socialmedia"/>
@@ -139,6 +150,7 @@ color: #0099CC
                 </div>
                 <!-- Copyright -->
             </footer>
+            </section>
             <!-- end of copyright section -->
 
         </body>

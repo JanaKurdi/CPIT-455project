@@ -14,6 +14,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     background: white;
     color: white;
     font-size: 20px;
+   
 }
 
 
@@ -89,3 +90,117 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
 
 }
 
+
+
+
+
+.Blog {
+    background: linear-gradient(rgba(142,200,255,255) , rgba(0,191,255,0.7));
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    flex-direction:row;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: space-between;
+    padding-top: 20px;
+ 
+}
+.card{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.Blog h2{
+    display: flex;
+    justify-content: center;
+    color:blueviolet;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 2.5em;
+}
+ .card{
+    background-color: azure;
+    border: 2px solid azure;
+    min-height: 14em;
+    width: 23em;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: 0.7s ease;
+ }
+
+ .card:hover{
+    transform: scale(1.1)
+ }
+
+ .image img{
+     width: 100%;
+ }
+
+ .card:hover .Blog-image{
+    opacity: 0.8;
+ }
+
+ .Blog-Info{
+    padding: 1em;
+ }
+ .Blog-title{
+    font-size: 1.2em;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 800;
+ }
+ .Blog-Subtitle{
+    display: flex;
+    margin-top: 10px;
+ }
+ .More-details{
+    text-decoration: none;
+    color: blueviolet;
+ }
+
+ .More-details:hover{
+    color: rgb(71, 0, 138);
+ }
+ input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color:blueviolet;
+    color: white;
+    font-size: 1.5;
+    font-weight: 800;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color:rgb(71, 0, 138);
+    transform: scale(1.1);
+  }
+  
+  .pr{
+
+    text-decoration: none;
+    font-weight: 700;
+    padding-left: 170px;
+    
+  }
+
+  .fa-shopping-cart {
+      padding-left: 1030px;
+  }
