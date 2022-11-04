@@ -14,9 +14,18 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     background: white;
     color: white;
     font-size: 20px;
-   
 }
-
+.dropdown{
+    position: relative;
+    z-index: 10;
+}
+.nav-item{
+    margin-right:10px;
+}
+.navbar {
+    width: 101%;
+    background-color:lightgrey; 
+}
 
 .bg-image {
     background-image: url('./images/Morocco.jpeg');
@@ -106,10 +115,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     padding: 20px;
     justify-content: space-between;
     padding-top: 20px;
- 
+
 }
 .card{
-    display: flex;
+    display:flex;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -123,7 +132,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     font-weight: 600;
     font-size: 2.5em;
 }
- .card{
+.card{
     background-color: azure;
     border: 2px solid azure;
     min-height: 14em;
@@ -131,42 +140,42 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     overflow: hidden;
     border-radius: 10px;
     transition: 0.7s ease;
- }
+}
 
- .card:hover{
+.card:hover{
     transform: scale(1.1)
- }
+}
 
- .image img{
-     width: 100%;
- }
+.image img{
+    width: 100%;
+}
 
- .card:hover .Blog-image{
+.card:hover .Blog-image{
     opacity: 0.8;
- }
+}
 
- .Blog-Info{
+.Blog-Info{
     padding: 1em;
- }
- .Blog-title{
+}
+.Blog-title{
     font-size: 1.2em;
     color: black;
     text-transform: uppercase;
     font-weight: 800;
- }
- .Blog-Subtitle{
+}
+.Blog-Subtitle{
     display: flex;
     margin-top: 10px;
- }
- .More-details{
+}
+.More-details{
     text-decoration: none;
     color: blueviolet;
- }
+}
 
- .More-details:hover{
+.More-details:hover{
     color: rgb(71, 0, 138);
- }
- input[type=text], select, textarea {
+}
+input[type=text], select, textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -175,9 +184,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     margin-top: 6px;
     margin-bottom: 16px;
     resize: vertical;
-  }
-  
-  input[type=submit] {
+}
+
+input[type=submit] {
     background-color:blueviolet;
     color: white;
     font-size: 1.5;
@@ -186,21 +195,20 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     border: none;
     border-radius: 4px;
     cursor: pointer;
-  }
-  
-  input[type=submit]:hover {
+}
+
+input[type=submit]:hover {
     background-color:rgb(71, 0, 138);
     transform: scale(1.1);
-  }
-  
-  .pr{
+}
 
+.pr{
     text-decoration: none;
     font-weight: 700;
     padding-left: 170px;
-    
-  }
 
-  .fa-shopping-cart {
-      padding-left: 1030px;
-  }
+}
+
+.fa-shopping-cart {
+    padding-left:20px;
+}

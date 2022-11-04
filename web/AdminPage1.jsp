@@ -24,7 +24,7 @@
         <!-- Scrollbar Custom CSS -->
         <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
         <link rel="stylesheet" href="stylesheetHome.css" type="text/css"/>
-         <link rel="stylesheet" href="stylesheet_admin.css" type="text/css"/>
+        <link rel="stylesheet" href="stylesheetProfile.css" type="text/css"/>
         <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
         <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
         <link rel="stylesheet" href="css/bootstrap-reboot.css" type="text/css"/>
@@ -32,6 +32,7 @@
         <link rel="stylesheet" href="css/bootstrap-grid.min.css" type="text/css"/>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 
     </head>
     <body>
@@ -53,65 +54,79 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="Users.jsp">Users</a>
                             </li>
+                            <li class="nav-item">
+                                
+                            </li>
                         </ul>
-                        <form class="d-flex"> 
-                            <button class=" btn btn btn-danger waves-effect" type="submit"href="logout.jsp" >Logout</button>
-                        </form>
+                        <ul class="nav navbar-nav navbar-right">
+                                <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img src="./images/profile.png" alt="profile" width="30" height="30">
+                                    <span class="name"> Admin </span>
+                                    <i class="fa fa-chevron-down fa_custom fa-2x" aria-hidden="true"></i>
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                    <li><a class="dropdown-item" href="#">My Profile</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a class="dropdown-item" href="#">Log out</a></li>
+                                </ul>
+                            </div>
+                        </ul>
+                    </div>
                 </nav>
             </div>
         </div>
-        <!-- end of navigation bar section  --> 
-        <br>
-        <!-- start of Orders table  --> 
-        <div class="container mt-5">
-            <div class="row">
-                <table class="table text-center mt-1 table-bordered ">
-                    <thead>
-                        <tr>
-                            <th>Order Number</th>
-                            <th>First name</th>
-                            <th>Last name</th>
-                            <th> Email</th> 
-                            <th> Address </th>
-                            <th>Phone Number</th>
-                            <th class="text-center">Action</th>
-                        </tr>
-                    </thead>
-                    <%
-                        Database.Database_connection user = new Database.Database_connection();
-                        ResultSet res = user.CustomerWithOrders();
-                        while (res.next()) {%>
+    <!-- end of navigation bar section  --> 
+    <br>
+    <!-- start of Orders table  --> 
+    <div class="container mt-5">
+        <div class="row">
+            <table class="table text-center mt-1 table-bordered ">
+                <thead>
                     <tr>
-                        <td><%= res.getString("OrderNum")%></td>
-                        <td><%= res.getString("Fname")%></td>
-                        <td><%= res.getString("lname")%></td>
-                        <td><%= res.getString("email")%></td>
-                        <td><%= res.getString("Address")%></td>
-                        <td><%= res.getString("phone")%></td>
-                        <td>
-                            <button class="btn" type="button">
-                                <img src="./images/cancelIcon.png" width="50" height="50"class=" rounded-circle d-inline-block align-top text-light" alt=""><!-- comment -->
-                            </button><!-- delete -->
-                        </td>
+                        <th>Order Number</th>
+                        <th>First name</th>
+                        <th>Last name</th>
+                        <th> Email</th> 
+                        <th> Address </th>
+                        <th>Phone Number</th>
+                        <th class="text-center">Status</th>
                     </tr>
-                    <% }%>
-                    </tbody>
-                </table>
-            </div> 
+                </thead>
+                <%
+                    Database.Database_connection user = new Database.Database_connection();
+                    ResultSet res = user.CustomerWithOrders();
+                    while (res.next()) {%>
+                <tr>
+                    <td><%= res.getString("OrderNum")%></td>
+                    <td><%= res.getString("Fname")%></td>
+                    <td><%= res.getString("lname")%></td>
+                    <td><%= res.getString("email")%></td>
+                    <td><%= res.getString("Address")%></td>
+                    <td><%= res.getString("phone")%></td>
+                    <td>
+                        <img src="./images/box.png" width="50" height="50"class=" d-inline-block align-top text-light" alt=""><!-- comment -->
+                    </td>
+                </tr>
+                <% }%>
+                </tbody>
+            </table>
+        </div> 
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <!-- copyright section -->
+
+    <footer class="text-center text-white">
+        <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            <img src="images/socialmedia.png" width="80" height="50" alt="socialmedia"/>
+            <br>
+            © 2022 Copyright:
+            <a class="text-dark"> Design by Doaa , Jana , Razan , and Renad</a>
         </div>
-                     <br><br><br><br><br><br><br><br><br><br><br><br>
-
-                    <!-- copyright section -->
-
-                    <footer class="text-center text-white">
-                        <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-                            <img src="images/socialmedia.png" width="80" height="50" alt="socialmedia"/>
-                            <br>
-                            © 2022 Copyright:
-                            <a class="text-dark"> Design by Doaa , Jana , Razan , and Renad</a>
-                        </div>
-                        <!-- Copyright -->
-                    </footer>
-                    <!-- end of copyright section -->       
-    </body>
+        <!-- Copyright -->
+    </footer>
+    <!-- end of copyright section -->       
+</body>
 </html>

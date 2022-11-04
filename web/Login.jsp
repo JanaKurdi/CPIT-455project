@@ -30,11 +30,11 @@ crossorigin="anonymous"></script>
     <div class="headline">
         <h2 class="text-headline">LOGIN</h2>
     </div>
-    <form name="Login_Form" action="Shop.jsp" method="POST">
+    <form name="Login_Form" action="VaildateLogin.jsp" method="POST">
         <br><br>
         <span>
             <label for="email" class="text-small-uppercase"></label>
-            <input class="text-body" id="email" name="email" type="email" placeholder="Enter Your Email">
+            <input class="text-body" id="username" name="username" type="text" placeholder="Enter Your username">
         </span>
         <br><br><br><br><br>
             <span>

@@ -26,10 +26,10 @@ crossorigin="anonymous"></script>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
-     
+
     </head>
     <body>
-     
+
         <div class="header_section">
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -46,23 +46,24 @@ crossorigin="anonymous"></script>
                             <li class="nav-item">
                                 <a class="nav-link" href="index.html">Home</a>
                             </li>
-                          
+
                         </ul>
-                       
+
                     </div>
                 </nav>
             </div>
         </div>
+         <div class="align-top">
+            <h5 class="fw-bold mb-4" style="position: absolute; bottom: 9;">
+                <a href="payment.jsp"><i class="fas fa-long-arrow-alt-left me-2"></i>Back to shopping cart</a>
+            </h5>
+        </div>
         <br>
-
-
         <hr class="mb-9" style="height: 2px; background-color: rgb(108, 90, 181); opacity: 1;">
-
 
         <div class="col-lg-6 px-5 py-4">
 
             <h3 class="mb-5 pt-2 text-center fw-bold text-uppercase">Payment</h3>
-
             <form class="mb-5">
 
                 <div class="form-outline mb-5">
@@ -98,9 +99,6 @@ crossorigin="anonymous"></script>
                     </div>
                 </div>
                 <a href="SeccessfullyPayment.jsp"> <button type="button" class="btn btn-primary btn-block btn-lg" style= "background-color: #8b67ce">CHECKOUT</button></a>
- <h5 class="fw-bold mb-4" style="position: absolute; bottom: 9;">
-                                            <a href="payment.jsp"><i class="fas fa-long-arrow-alt-left me-2"></i>Back to shopping cart</a>
-                                        </h5>
             </form>
         </div>
         <footer class="text-center text-white">

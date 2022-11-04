@@ -17,6 +17,7 @@
                     Database.Database_connection user1 = new Database.Database_connection();
                     ResultSet result = user1.CheckISAuthourizedCustomer(username, pass);
                     if (result.next()) {
+                        out.print("erorr in next");
                         session.setAttribute("user", username);
                         session.setAttribute("pass", pass);
                         String role = result.getString("role");
@@ -24,7 +25,7 @@
                         out.println("First Name: " + result.getString("fname") + "     ");
                         out.println("Last Name: " + result.getString("lname") + "     ");
                         if (role.equalsIgnoreCase("customer")) {
-                            response.sendRedirect("Users.jsp");
+                            response.sendRedirect("Shop.jsp");
                         }
                         if (role.equalsIgnoreCase("admin")) {
                             response.sendRedirect("admin.jsp");

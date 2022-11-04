@@ -118,6 +118,7 @@
                         </div>
                     </div>
                 </section>
+            </div>
                 <!--end of Contact us Section-->
 
                 <br>
