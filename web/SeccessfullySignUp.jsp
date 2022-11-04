@@ -23,12 +23,28 @@ crossorigin="anonymous"></script>
 <!DOCTYPE html>
 <html>
     <head>
-
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Email Confirmation</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Tagrest website</title>
+        <!-- bootstrap css -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <!-- style css -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <!-- Fav icon-->
+        <link rel="icon" type="image/x-icon" href="./images/Tagrest.jpg" />
+        <!-- Responsive-->
+        <link rel="stylesheet" href="css/responsive.css">
+        <!-- Scrollbar Custom CSS -->
+        <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+        <link rel="stylesheet" href="stylesheetHome.css" type="text/css"/>
+        <link rel="stylesheet" href="stylesheetProfile.css" type="text/css"/>
+        <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
+        <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+        <link rel="stylesheet" href="css/bootstrap-reboot.css" type="text/css"/>
+        <link rel="stylesheet" href="css/bootstrap-grid.min.css" type="text/css">
+        <link rel="stylesheet" href="css/bootstrap-grid.min.css" type="text/css"/>
+      
         <style type="text/css">
             /**
              * Google webfonts. Recommended to include the .woff version for cross-client compatibility.
@@ -47,7 +63,7 @@ crossorigin="anonymous"></script>
                     src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(https://fonts.gstatic.com/s/sourcesanspro/v10/toadOcfmlt9b38dHJxOBGFkQc6VGVFSmCnC_l7QZG60.woff) format('woff');
                 }
             }
-           
+
             body,
             table,
             td,
@@ -55,17 +71,17 @@ crossorigin="anonymous"></script>
                 -ms-text-size-adjust: 100%; /* 1 */
                 -webkit-text-size-adjust: 100%; /* 2 */
             }
-          
+
             table,
             td {
                 mso-table-rspace: 0pt;
                 mso-table-lspace: 0pt;
             }
-           
+
             img {
                 -ms-interpolation-mode: bicubic;
             }
-           
+
             a[x-apple-data-detectors] {
                 font-family: inherit !important;
                 font-size: inherit !important;
@@ -74,7 +90,7 @@ crossorigin="anonymous"></script>
                 color: inherit !important;
                 text-decoration: none !important;
             }
-           
+
             div[style*="margin: 16px 0;"] {
                 margin: 0 !important;
             }
@@ -84,7 +100,7 @@ crossorigin="anonymous"></script>
                 padding: 0 !important;
                 margin: 0 !important;
             }
-           
+
             table {
                 border-collapse: collapse !important;
             }

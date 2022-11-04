@@ -5,32 +5,31 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<!-- Favicon-->
-<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-<!-- Font Awesome icons (free version)-->
-<script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
-crossorigin="anonymous"></script>
-<!-- Google fonts-->
-<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
-      rel="stylesheet" type="text/css" />
-<link
-    href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic"
-    rel="stylesheet" type="text/css" />
-<!-- Core theme CSS (includes Bootstrap)-->
-<link href="css/index-styles.css" rel="stylesheet" />
+
 <!DOCTYPE html>
 <html>
     <head>
-
-        <meta charset="utf-8">
+  <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>payment Confirmation</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+        crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+              rel="stylesheet" type="text/css" />
+        <link  href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/index-styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="stylesheetProfile.css" type="text/css"/>
 
         <style type="text/css">
-           
+
             @media screen {
                 @font-face {
                     font-family: 'Source Sans Pro';
@@ -45,7 +44,7 @@ crossorigin="anonymous"></script>
                     src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(https://fonts.gstatic.com/s/sourcesanspro/v10/toadOcfmlt9b38dHJxOBGFkQc6VGVFSmCnC_l7QZG60.woff) format('woff');
                 }
             }
-           
+
             body,
             table,
             td,
@@ -53,17 +52,17 @@ crossorigin="anonymous"></script>
                 -ms-text-size-adjust: 100%; /* 1 */
                 -webkit-text-size-adjust: 100%; /* 2 */
             }
-           
+
             table,
             td {
                 mso-table-rspace: 0pt;
                 mso-table-lspace: 0pt;
             }
-           
+
             img {
                 -ms-interpolation-mode: bicubic;
             }
-           
+
             a[x-apple-data-detectors] {
                 font-family: inherit !important;
                 font-size: inherit !important;
@@ -72,7 +71,7 @@ crossorigin="anonymous"></script>
                 color: inherit !important;
                 text-decoration: none !important;
             }
-           
+
             div[style*="margin: 16px 0;"] {
                 margin: 0 !important;
             }
@@ -82,7 +81,7 @@ crossorigin="anonymous"></script>
                 padding: 0 !important;
                 margin: 0 !important;
             }
-            
+
             table {
                 border-collapse: collapse !important;
             }
@@ -98,8 +97,8 @@ crossorigin="anonymous"></script>
             }
         </style>
 
-   
-   
+
+
     <body style="background-color: #ffffff;">
 
         <!-- start body -->

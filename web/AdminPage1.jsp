@@ -36,6 +36,10 @@
 
     </head>
     <body>
+        <%
+            Database.Database_connection user = new Database.Database_connection();
+            ResultSet res = user.CustomerWithOrders();%>
+
         <div class="header_section">
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -55,21 +59,22 @@
                                 <a class="nav-link" href="Users.jsp">Users</a>
                             </li>
                             <li class="nav-item">
-                                
+
                             </li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
-                                <div class="dropdown">
+                            <div class="dropdown">
                                 <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <img src="./images/profile.png" alt="profile" width="30" height="30">
                                     <span class="name"> Admin </span>
-                                    <i class="fa fa-chevron-down fa_custom fa-2x" aria-hidden="true"></i>
+                                    <i class="chevron-down" aria-hidden="true"></i>
                                     <span class="caret"></span>
                                 </button>
                                 <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
-                                    <li><a class="dropdown-item" href="#">My Profile</a></li>
                                     <li role="separator" class="divider"></li>
-                                    <li><a class="dropdown-item" href="#">Log out</a></li>
+                                    <li>
+                                        <a class="dropdown-item"href="logout.jsp">
+                                            <img src="./images/logout.png" width="15" height="15" alt="logout"> Log out</a></li>
                                 </ul>
                             </div>
                         </ul>
@@ -77,56 +82,54 @@
                 </nav>
             </div>
         </div>
-    <!-- end of navigation bar section  --> 
-    <br>
-    <!-- start of Orders table  --> 
-    <div class="container mt-5">
-        <div class="row">
-            <table class="table text-center mt-1 table-bordered ">
-                <thead>
+        <!-- end of navigation bar section  --> 
+        <br>
+        <!-- start of Orders table  --> 
+        <div class="container mt-5">
+            <div class="row">
+                <table class="table text-center mt-1 table-bordered ">
+                    <thead>
+                        <tr>
+                            <th>Order Number</th>
+                            <th>First name</th>
+                            <th>Last name</th>
+                            <th> Email</th> 
+                            <th> Address </th>
+                            <th>Phone Number</th>
+                            <th class="text-center">Status</th>
+                        </tr>
+                    </thead>
+
+                    <%   while (res.next()) {%>
                     <tr>
-                        <th>Order Number</th>
-                        <th>First name</th>
-                        <th>Last name</th>
-                        <th> Email</th> 
-                        <th> Address </th>
-                        <th>Phone Number</th>
-                        <th class="text-center">Status</th>
+                        <td><%= res.getString("OrderNum")%></td>
+                        <td><%= res.getString("Fname")%></td>
+                        <td><%= res.getString("lname")%></td>
+                        <td><%= res.getString("email")%></td>
+                        <td><%= res.getString("Address")%></td>
+                        <td><%= res.getString("phone")%></td>
+                        <td>
+                            <img src="./images/box.png" width="50" height="50"class=" d-inline-block align-top text-light" alt=""><!-- comment -->
+                        </td>
                     </tr>
-                </thead>
-                <%
-                    Database.Database_connection user = new Database.Database_connection();
-                    ResultSet res = user.CustomerWithOrders();
-                    while (res.next()) {%>
-                <tr>
-                    <td><%= res.getString("OrderNum")%></td>
-                    <td><%= res.getString("Fname")%></td>
-                    <td><%= res.getString("lname")%></td>
-                    <td><%= res.getString("email")%></td>
-                    <td><%= res.getString("Address")%></td>
-                    <td><%= res.getString("phone")%></td>
-                    <td>
-                        <img src="./images/box.png" width="50" height="50"class=" d-inline-block align-top text-light" alt=""><!-- comment -->
-                    </td>
-                </tr>
-                <% }%>
-                </tbody>
-            </table>
-        </div> 
-    </div>
-    <br><br><br><br><br><br><br><br><br><br><br><br>
-
-    <!-- copyright section -->
-
-    <footer class="text-center text-white">
-        <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            <img src="images/socialmedia.png" width="80" height="50" alt="socialmedia"/>
-            <br>
-            © 2022 Copyright:
-            <a class="text-dark"> Design by Doaa , Jana , Razan , and Renad</a>
+                    <% }%>
+                    </tbody>
+                </table>
+            </div> 
         </div>
-        <!-- Copyright -->
-    </footer>
-    <!-- end of copyright section -->       
-</body>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+
+        <!-- copyright section -->
+
+        <footer class="text-center text-white">
+            <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                <img src="images/socialmedia.png" width="80" height="50" alt="socialmedia"/>
+                <br>
+                © 2022 Copyright:
+                <a class="text-dark"> Design by Doaa , Jana , Razan , and Renad</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- end of copyright section -->       
+    </body>
 </html>

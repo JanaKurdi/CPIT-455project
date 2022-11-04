@@ -23,7 +23,7 @@ crossorigin="anonymous"></script>
     rel="stylesheet" type="text/css" />
 <!-- Core theme CSS (includes Bootstrap)-->
 <link href="css/index-styles.css" rel="stylesheet" />
-
+<link rel="stylesheet" href="stylesheetProfile.css" type="text/css"/>
 
 
 <body>
@@ -44,20 +44,25 @@ crossorigin="anonymous"></script>
                             <li class="nav-item">
                                 <a class="nav-link" href="index.html">Home</a>
                             </li>
-                          
+
                         </ul>
-                    
+
                     </div>
                 </nav>
             </div>
         </div>
         <br>
+
         <div class="container h-100 py-5">
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col">
                     <div class="card shopping-cart" style="border-radius: 15px;">
                         <div class="card-body text-black">
-
+                            <div class="leftbox">
+                                <a href="Shop.jsp" class="rounded-circle">
+                                    <img src="./images/previous.png" alt="backbutton" width="30" height="30">
+                                </a>
+                            </div>
                             <div class="row">
                                 <div class="col-lg-6 px-5 py-4">
 
@@ -213,10 +218,6 @@ crossorigin="anonymous"></script>
                                         </div>
 
                                         <a href="CkeckOut.jsp"> <button type="button" class="btn btn-primary btn-block btn-lg" style= "background-color: #8b67ce">PLACE ORDER</button></a>
-
-                                        <h5 class="fw-bold mb-4" style="position: absolute; bottom: 9;">
-                                            <a href="Shop.jsp"><i class="fas fa-long-arrow-alt-left me-2"></i>Back to shopping</a>
-                                        </h5>
 
                                     </form>
 

@@ -24,6 +24,7 @@
         <!-- Scrollbar Custom CSS -->
         <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css" type="text/css"/>
         <link rel="stylesheet" href="stylesheetHome.css" type="text/css"/>
+        <link rel="stylesheet" href="stylesheetProfile.css" type="text/css"/>
         <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
         <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
         <link rel="stylesheet" href="css/bootstrap-reboot.css" type="text/css"/>
@@ -75,9 +76,12 @@
                                         <span class="caret"></span>
                                     </button>
                                     <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
-                                        <li><a class="dropdown-item" href="#">My Profile</a></li>
+                                        <li> <a class="dropdown-item"  href="profile.jsp">
+                                                <img src="./images/account.png" width="15" height="15"alt="account">My Account</a></li>
                                         <li role="separator" class="divider"></li>
-                                        <li><a class="dropdown-item" href="#">Log out</a></li>
+                                        <li>
+                                            <a class="dropdown-item"href="logout.jsp">
+                                                <img src="./images/logout.png" width="15" height="15" alt="logout"> Log out</a></li>
                                     </ul>
                                 </div>
                             </li>

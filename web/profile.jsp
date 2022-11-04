@@ -24,6 +24,7 @@
         <!-- Scrollbar Custom CSS -->
         <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css" type="text/css"/>
         <link rel="stylesheet" href="stylesheetHome.css" type="text/css"/>
+        <link rel="stylesheet" href="stylesheetProfile.css" type="text/css"/>
         <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
         <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
         <link rel="stylesheet" href="css/bootstrap-reboot.css" type="text/css"/>
@@ -37,37 +38,88 @@
 
     <body>
 
- <!-- navigation bar section  --> 
-            <div class="header_section">
-                <div class="container-fluid">
-                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                        <img src="./images/Tagrest.jpg" width="60" height="60" class=" rounded-circle d-inline-block align-top text-light" alt="">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- navigation bar section  --> 
+        <div class="header_section">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <img src="./images/Tagrest.jpg" width="60" height="60" class=" rounded-circle d-inline-block align-top text-light" alt="">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-                            <ul class="navbar-nav mr-auto">
-                                <li class="nav-item">
-                                    <a class="navbar-brand" href="#">Tagrest</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="index.html">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="ContactUs.jsp">Contact us</a>
-                                </li>
-                                
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="navbar-brand" href="#">Tagrest</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="ContactUs.jsp">Contact us</a>
+                            </li>
+                        </ul>
 
-                           </ul>
-                           
-                             
-                         </div>
-                    </nav>
+                        <ul class="nav navbar-nav navbar-right">
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img src="./images/profile.png" alt="profile" width="30" height="30">
+                                    <span class="name"> Admin </span>
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                    <li> <a class="dropdown-item"  href="profile.jsp">
+                                            <img src="./images/account.png" width="15" height="15"alt="account">My Account</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li>
+                                        <a class="dropdown-item"href="logout.jsp">
+                                            <img src="./images/logout.png" width="15" height="15" alt="logout"> Log out</a></li>
+                                </ul>
+                            </div>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- end of navigation bar section  --> 
+        <br>
+        <div class="container">
+            <div class="col">
+                <div class="row">
+
+                    <h1> Personal Info </h1>
+                    <p> You can change your information by filling the information below: </p>
+                    <h4>First name</h4>
+                    <input type="text" class="input "name="fname" value="Enter your first name"><!-- comment -->
+                    <h4>last name</h4>
+                    <input type="text" class="input"name="lname" value="Enter your last name"><!-- comment -->
+                    <h4>Email</h4>
+                    <input type="text" class="input"name="email" value="email@gmail.com"><!-- comment -->
+                    <h4>Phone Number</h4>
+                    <input type="text" name="phone" class="input"value="05########"><!-- comment -->
+                    <h4>Password</h4>
+                    <input class="input"name="password" type="text" value="Only Upper-Lower Letters">
+                    <h4>Confirm password</h4>
+                    <input class="input"name="password" type="text" value="Only Upper-Lower Letters">
+
+                </div>
+                <div class="btn">
+                    <a href="SuccessfullyUpdate.jsp"> <button type="button" class="btn btn-primary btn-block btn-lg" style= "background-color: #8b67ce">Update</button></a> 
                 </div>
             </div>
-            <!-- end of navigation bar section  --> 
-            <br>
+        </div>
 
+        <!-- end of container -->
+
+        <footer class="text-center text-white">
+            <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.1);">
+                <img src="images/socialmedia.png" width="80" height="50" alt="socialmedia"/>
+                <br>
+                © 2022 Copyright:
+                <a class="text-dark"> Design by Doaa , Jana , Razan , and Renad</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- end of copyright section -->  
     </body>
 </html>

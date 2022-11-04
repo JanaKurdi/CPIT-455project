@@ -8,7 +8,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-     <head>
+    <head>
         <!-- basic -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,7 +25,7 @@
         <!-- Scrollbar Custom CSS -->
         <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
         <link rel="stylesheet" href="stylesheetHome.css" type="text/css"/>
-         <link rel="stylesheet" href="stylesheet_admin.css" type="text/css"/>
+        <link rel="stylesheet" href="stylesheet_admin.css" type="text/css"/>
         <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
         <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
         <link rel="stylesheet" href="css/bootstrap-reboot.css" type="text/css"/>
@@ -52,9 +52,24 @@
                                 <a class="nav-link" href="AdminPage1.jsp">Orders</a>
                             </li>
                         </ul>
-                        <form class="d-flex"> 
-                            <button class=" btn btn btn-danger waves-effect" type="submit"href="logout.jsp" >Logout</button>
-                        </form>
+                        <ul class="nav navbar-nav navbar-right">
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img src="./images/profile.png" alt="profile" width="30" height="30">
+                                    <span class="name"> Admin </span>
+                                    <i class="fa fa-chevron-down fa_custom fa-2x" aria-hidden="true"></i>
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                    <li> <a class="dropdown-item">
+                                            <img src="./images/account.png" width="15" height="15" alt="account" class="rounded-right"  href="profile.jsp"> My Account</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li>
+                                        <a class="dropdown-item">
+                                            <img src="./images/logout.png" width="15" height="15" alt="logout" class="rounded-right" href="logout.jsp"> Log out</a></li>
+                                </ul>
+                            </div>
+                        </ul>
                 </nav>
             </div>
         </div>
@@ -91,19 +106,19 @@
                 </table>
             </div> 
         </div>
-                    <br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
 
-                    <!-- copyright section -->
+        <!-- copyright section -->
 
-                    <footer class="text-center text-white">
-                        <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-                            <img src="images/socialmedia.png" width="80" height="50" alt="socialmedia"/>
-                            <br>
-                            © 2022 Copyright:
-                            <a class="text-dark"> Design by Doaa , Jana , Razan , and Renad</a>
-                        </div>
-                        <!-- Copyright -->
-                    </footer>
-                    <!-- end of copyright section -->       
+        <footer class="text-center text-white">
+            <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                <img src="images/socialmedia.png" width="80" height="50" alt="socialmedia"/>
+                <br>
+                © 2022 Copyright:
+                <a class="text-dark"> Design by Doaa , Jana , Razan , and Renad</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- end of copyright section -->       
     </body>
 </html>

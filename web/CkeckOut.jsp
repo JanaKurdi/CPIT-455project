@@ -1,10 +1,11 @@
-<%-- 
+<%--
     Document   : CkeckOut
     Created on : Oct 28, 2022, 7:29:02 AM
     Author     : renad
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <link rel="stylesheet" href="/CPIT-455project/stylesheetPayment.css"> <!-- multistep form -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -21,14 +22,18 @@ crossorigin="anonymous"></script>
     rel="stylesheet" type="text/css" />
 <!-- Core theme CSS (includes Bootstrap)-->
 <link href="css/index-styles.css" rel="stylesheet" />
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+<link rel="stylesheet" href="stylesheetProfile.css" type="text/css"/>
+<!-- Scrollbar Custom CSS -->
 
+<html>
+    <head> 
+        <title>Tagrest website</title>
+        <!-- bootstrap css -->
+        <!-- Fav icon-->
+        <link rel="icon" type="image/x-icon" href="./images/Tagrest.jpg" />
     </head>
     <body>
+
 
         <div class="header_section">
             <div class="container-fluid">
@@ -53,54 +58,66 @@ crossorigin="anonymous"></script>
                 </nav>
             </div>
         </div>
-         <div class="align-top">
-            <h5 class="fw-bold mb-4" style="position: absolute; bottom: 9;">
-                <a href="payment.jsp"><i class="fas fa-long-arrow-alt-left me-2"></i>Back to shopping cart</a>
-            </h5>
+
+        <div class="container h-100 py-5">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col">
+                    <div class="card shopping-cart" style="border-radius: 15px;">
+                        <div class="card-body text-black">
+                            <div class="leftbox">
+                                <a href="payment.jsp" class="rounded-circle">
+                                    <img src="./images/previous.png" alt="backbutton" width="30" height="30">
+                                </a>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 px-5 py-4">
+
+                                    <h3 class="mb-5 pt-2 text-center fw-bold text-uppercase">Payment</h3>
+                                    <form class="mb-5">
+
+                                        <div class="form-outline mb-5">
+                                            <label class="form-label" for="typeText">Card Number</label>
+                                            <input type="text" id="typeText" class="form-control form-control-lg" siez="17"
+                                                   placeholder="1234 5678 9012 3456" minlength="19" maxlength="19" />
+
+                                        </div>
+
+                                        <div class="form-outline mb-5">
+                                            <label class="form-label" for="typeName">Name on card</label>
+                                            <input type="text" id="typeName" class="form-control form-control-lg" siez="17"
+                                                   placeholder="Renad G.SAAD" />
+
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-6 mb-5">
+                                                <div class="form-outline">
+                                                    <label class="form-label" for="typeExp">Expiration</label>
+                                                    <input type="text" id="typeExp" class="form-control form-control-lg" placeholder="01/22"
+                                                           size="7" id="exp" minlength="7" maxlength="7" />
+
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-5">
+                                                <div class="form-outline">
+                                                    <label class="form-label" for="typeText">Cvv</label>
+                                                    <input type="password" id="typeText" class="form-control form-control-lg"
+                                                           placeholder="&#9679;&#9679;&#9679;" size="1" minlength="3" maxlength="3" />
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="SeccessfullyPayment.jsp"> <button type="button" class="btn btn-primary btn-block btn-lg" style= "background-color: #8b67ce">CHECKOUT</button></a>
+                                    </form>
+                                </div>
+                            </div>
+                        </div> 
+
+                </div> 
+            </div>
         </div>
-        <br>
-        <hr class="mb-9" style="height: 2px; background-color: rgb(108, 90, 181); opacity: 1;">
-
-        <div class="col-lg-6 px-5 py-4">
-
-            <h3 class="mb-5 pt-2 text-center fw-bold text-uppercase">Payment</h3>
-            <form class="mb-5">
-
-                <div class="form-outline mb-5">
-                    <label class="form-label" for="typeText">Card Number</label>
-                    <input type="text" id="typeText" class="form-control form-control-lg" siez="17"
-                           placeholder="1234 5678 9012 3456" minlength="19" maxlength="19" />
-
-                </div>
-
-                <div class="form-outline mb-5">
-                    <label class="form-label" for="typeName">Name on card</label>
-                    <input type="text" id="typeName" class="form-control form-control-lg" siez="17"
-                           placeholder="Renad G.SAAD" />
-
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6 mb-5">
-                        <div class="form-outline">
-                            <label class="form-label" for="typeExp">Expiration</label>
-                            <input type="text" id="typeExp" class="form-control form-control-lg" placeholder="01/22"
-                                   size="7" id="exp" minlength="7" maxlength="7" />
-
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-5">
-                        <div class="form-outline">
-                            <label class="form-label" for="typeText">Cvv</label>
-                            <input type="password" id="typeText" class="form-control form-control-lg"
-                                   placeholder="&#9679;&#9679;&#9679;" size="1" minlength="3" maxlength="3" />
-
-                        </div>
-                    </div>
-                </div>
-                <a href="SeccessfullyPayment.jsp"> <button type="button" class="btn btn-primary btn-block btn-lg" style= "background-color: #8b67ce">CHECKOUT</button></a>
-            </form>
         </div>
+        <br><br>  <br><br><br><br>
         <footer class="text-center text-white">
             <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.1);">
                 <img src="images/socialmedia.png" width="80" height="50" alt="socialmedia"/>
