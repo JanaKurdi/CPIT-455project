@@ -8,6 +8,18 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
+    <head>
+        meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Tagrest website</title>
+        <!-- bootstrap css -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <!-- style css -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <!-- Fav icon-->
+        <link rel="icon" type="image/x-icon" href="./images/Tagrest.jpg" />
+    </head>
     <body>
         <%
             String username = request.getParameter("username");
@@ -15,31 +27,30 @@
             if (username != null && username.length() > 3 && username.matches("^[a-zA-Z]+$")) {
                 if (pass != null && pass.length() >= 5) {
                     Database.Database_connection user1 = new Database.Database_connection();
-                    ResultSet result = user1.CheckISAuthourizedCustomer(username, pass);
-                    if (result.next()) {
-                        out.print("erorr in next");
-                        session.setAttribute("user", username);
-                        session.setAttribute("pass", pass);
-                        String role = result.getString("role");
-                        out.println("Role: " + result.getString("role") + "     ");
-                        out.println("First Name: " + result.getString("fname") + "     ");
-                        out.println("Last Name: " + result.getString("lname") + "     ");
+                    String role = user1.CheckISAuthourizedCustomer(username, pass);
+                    role = user1.CheckISAuthourizedAdmin(username, pass);
+                    if (role != null) {
                         if (role.equalsIgnoreCase("customer")) {
+                            session.setAttribute("userCustomer", username);
+                            session.setAttribute("pass", pass);
                             response.sendRedirect("Shop.jsp");
                         }
                         if (role.equalsIgnoreCase("admin")) {
-                            response.sendRedirect("admin.jsp");
+                        session.setAttribute("userAdmin", username);
+                        session.setAttribute("pass", pass);
+                            response.sendRedirect("AdminPage1.jsp");
                         }
                     } else {
-                        out.print(username + " you are not authorized user");
+                        //page for redirect
+                        response.sendRedirect("UnauthorizedPage.jsp");
                     }
                 } else {
-                    out.print(" username or pass not correct");
-                    out.print("<a href='homepage.jsp'> Restart </a>");
+                    //page for redirect
+                   // out.print(" username or pass not correct");
+                    response.sendRedirect("WrongEntry.jsp");
                 }
             } else {
-                out.print("Please enter correct data !!");
-                out.print("<a href='Login.jsp'> Restart </a>");
+                response.sendRedirect("Login.jsp");
             }
         %>
     </body>

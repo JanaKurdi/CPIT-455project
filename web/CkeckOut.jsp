@@ -33,7 +33,9 @@ crossorigin="anonymous"></script>
         <link rel="icon" type="image/x-icon" href="./images/Tagrest.jpg" />
     </head>
     <body>
-
+        <% if (session.getAttribute("userCustomer") != null) {
+                Database.Database_connection user = new Database.Database_connection();
+        %>
 
         <div class="header_section">
             <div class="container-fluid">
@@ -107,15 +109,15 @@ crossorigin="anonymous"></script>
                                                 </div>
                                             </div>
                                         </div>
-                                        <a href="SeccessfullyPayment.jsp"> <button type="button" class="btn btn-primary btn-block btn-lg" style= "background-color: #8b67ce">CHECKOUT</button></a>
+                                        <a href="SuccessfullyPayment.jsp"> <button type="button" class="btn btn-primary btn-block btn-lg" style= "background-color: #8b67ce">CHECKOUT</button></a>
                                     </form>
                                 </div>
                             </div>
                         </div> 
 
-                </div> 
+                    </div> 
+                </div>
             </div>
-        </div>
         </div>
         <br><br>  <br><br><br><br>
         <footer class="text-center text-white">
@@ -128,5 +130,12 @@ crossorigin="anonymous"></script>
             <!-- Copyright -->
         </footer>
         <!-- end of copyright section -->
+        <%
+                user.close();
+            } else {
+             response.sendRedirect("UnauthorizedPage.jsp");
+
+            }
+        %>
     </body>
 </html>

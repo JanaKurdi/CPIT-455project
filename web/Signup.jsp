@@ -9,6 +9,8 @@
 <link rel="stylesheet" href="/CPIT-455project/stylesheetSignUp.css"> <!-- multistep form -->
 <script src="js/SignUpjavascript.js"></script><!-- comment -->
 <!-- Favicon-->
+<title>Tagrest website</title>
+<link rel="icon" type="image/x-icon" href="./images/Tagrest.jpg" /> 
 <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 <!-- Font Awesome icons (free version)-->
 <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
@@ -55,7 +57,7 @@ crossorigin="anonymous"></script>
             <label for="phone" class="text-small-uppercase"></label>
             <input class="text-body" id="phone" name="phone" type="text" placeholder="Enter your Phone Number">
         </span>
-        
+
         <input class="text-small-uppercase" id="submit" type="submit" value="SIGN UP">
     </form>
 </main>

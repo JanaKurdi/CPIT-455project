@@ -1,21 +1,22 @@
 <%-- 
-    Document   : SuccessfullyUpdate
-    Created on : Nov 4, 2022, 8:54:56 PM
+    Document   : UnauthorizedPage
+    Created on : Nov 5, 2022, 1:33:32 AM
     Author     : Razan Alshaikh
 --%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    <head>
+   <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-
+       
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <title>Tagrest website</title>
+       <title>Tagrest website</title>
         <link rel="icon" type="image/x-icon" href="./images/Tagrest.jpg" /> 
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
@@ -97,9 +98,7 @@
             }
         </style>
     <body style="background-color: #ffffff;">
-        <% if (session.getAttribute("userCustomer") != null) {
-                Database.Database_connection user = new Database.Database_connection();
-        %>
+
         <!-- start body -->
         <table border="0" cellpadding="0" cellspacing="0" width="100%">
             <div class="header_section">
@@ -124,91 +123,86 @@
                 </div>
             </div>
             <br>
-        </table>
+         </table>
 
-        <!-- start body -->
-        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <!-- start body -->
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
 
-            <!-- start logo -->
-            <tr>
-                <td align="center" bgcolor="#ffffff">
+                    <!-- start logo -->
+                    <tr>
+                        <td align="center" bgcolor="#ffffff">
 
-                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
-                        <tr>
-                            <td align="center" valign="top" style="padding: 36px 24px;">
-                                <a target="_blank" style="display: inline-block;">
-                                    <img src="images/successfulUpdate.png" alt="Logo" border="0" width="48" style="display: block; width: 200px; max-width: 200px; min-width: 200px;">
-                                </a>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-            <!-- end logo -->
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
+                                <tr>
+                                    <td align="center" valign="top" style="padding: 36px 24px;">
+                                        <a target="_blank" style="display: inline-block;">
+                                            <img src="images/unauthorized_Access.png" alt="Logo" border="0" width="48" style="display: block; width: 200px; max-width: 200px; min-width: 200px;">
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- end logo -->
 
-            <!-- start hero -->
-            <tr>
-                <td align="center" bgcolor="#ffffff">
+                    <!-- start hero -->
+                    <tr>
+                        <td align="center" bgcolor="#ffffff">
 
-                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
-                        <tr>
-                            <td align="center" bgcolor="#ffffff" style="padding: 36px 24px 0; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; border-top: 3px solid #d4dadf;">
-                                <h1 style="margin: 0; font-size: 32px; font-weight: 700; letter-spacing: -1px; line-height: 48px;"> Your Information Successfully Updated!</h1>
-                            </td>
-                        </tr>
-                    </table>
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
+                                <tr>
+                                    <td align="center" bgcolor="#ffffff" style="padding: 36px 24px 0; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; border-top: 3px solid #d4dadf;">
+                                        <h1 style="margin: 0; font-size: 32px; font-weight: 700; letter-spacing: -1px; line-height: 48px;"> You are not authorized !</h1>
+                                        <p> please Login first </p>
+                                    </td>
+                                </tr>
+                            </table>
 
-                </td>
-            </tr>
-            <!-- end hero -->
+                        </td>
+                    </tr>
+                    <!-- end hero -->
 
-            <!-- start copy block -->
-            <tr>
-                <td align="center" bgcolor="#ffffff">
+                    <!-- start copy block -->
+                    <tr>
+                        <td align="center" bgcolor="#ffffff">
 
-                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
 
-                        <!-- start button -->
-                        <tr>
-                            <td align="left" bgcolor="#ffffff">
-                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                    <tr>
-                                        <td align="center" bgcolor="#ffffff" style="padding: 12px;">
-                                            <table border="0" cellpadding="0" cellspacing="0">
-                                                <tr>
-                                                    <td align="center" bgcolor="#1a82e2" style="border-radius: 6px;">
-                                                        <a href="index.html" target="_blank" style="display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; background-color: #48ca5f; text-decoration: none; border-radius: 6px;">Homepage</a>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                        <!-- end button -->
-                    </table>
+                                <!-- start button -->
+                                <tr>
+                                    <td align="left" bgcolor="#ffffff">
+                                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td align="center" bgcolor="#ffffff" style="padding: 12px;">
+                                                    <table border="0" cellpadding="0" cellspacing="0">
+                                                        <tr>
+                                                            <td align="center" bgcolor="#1a82e2" style="border-radius: 6px;">
+                                                                <a href="Login.jsp" target="_blank" style="display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; background-color: #48ca5f; text-decoration: none; border-radius: 6px;">Login</a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!-- end button -->
+                            </table>
 
-                </td>
-            </tr>
-            <!-- end copy block -->
-        </table>
-        <!-- end body -->
-        <footer class="text-center text-white">
-            <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.1);">
-                <img src="images/socialmedia.png" width="80" height="50" alt="socialmedia"/>
-                <br>
-                © 2022 Copyright:
-                <a class="text-dark"> Design by Doaa , Jana , Razan , and Renad</a>
-            </div>
-            <!-- Copyright -->
-        </footer>
-        <%
-                user.close();
-            } else {
-                response.sendRedirect("UnauthorizedPage.jsp");
-
-            }
-        %>
+                        </td>
+                    </tr>
+                    <!-- end copy block -->
+                </table>
+                <!-- end body -->
+                <footer class="text-center text-white">
+                    <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.1);">
+                        <img src="images/socialmedia.png" width="80" height="50" alt="socialmedia"/>
+                        <br>
+                        © 2022 Copyright:
+                        <a class="text-dark"> Design by Doaa , Jana , Razan , and Renad</a>
+                    </div>
+                    <!-- Copyright -->
+                </footer>
+        <!-- end of copyright section -->
     </body>
 </html>

@@ -4,6 +4,8 @@
     Author     : duaas
 --%>
 
+<%@page import="com.mysql.cj.protocol.Resultset"%>
+        
 <!DOCTYPE html>
 <html lang="en"> <!--english language-->
 
@@ -43,6 +45,10 @@
 
     </head>
     <body>
+         <% if (session.getAttribute("userCustomer") != null) {
+                Database.Database_connection user = new Database.Database_connection();
+                
+        %>
         <!-- navigation bar section  --> 
         <div class="header_section">
             <div class="container-fluid">
@@ -71,7 +77,7 @@
                                 <div class="dropdown">
                                     <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         <img src="./images/profile.png" alt="profile" width="30" height="30">
-                                        <span class="name"> Admin </span>
+                                        <span class="username" >Guest </span>
                                         <i class="chevron-down" aria-hidden="true"></i>
                                         <span class="caret"></span>
                                     </button>
@@ -86,7 +92,6 @@
                                 </div>
                             </li>
                         </ul>
-
                     </div>
                 </nav>
             </div>
@@ -176,6 +181,12 @@
         </footer>
     </section>
     <!-- end of copyright section -->
+        <%
+                user.close();
+            } else {
+                   response.sendRedirect("UnauthorizedPage.jsp");
 
+            }
+        %>
 </body>
 </html>

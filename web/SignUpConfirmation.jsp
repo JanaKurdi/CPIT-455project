@@ -9,6 +9,10 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <!-- Favicon-->
 <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+<title>Tagrest website</title>
+<!-- bootstrap css -->
+<!-- Fav icon-->
+<link rel="icon" type="image/x-icon" href="./images/Tagrest.jpg" />
 <!-- Font Awesome icons (free version)-->
 <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
 crossorigin="anonymous"></script>
@@ -20,6 +24,7 @@ crossorigin="anonymous"></script>
     rel="stylesheet" type="text/css" />
 <!-- Core theme CSS (includes Bootstrap)-->
 <link href="css/index-styles.css" rel="stylesheet" />
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -47,7 +52,7 @@ crossorigin="anonymous"></script>
                     src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(https://fonts.gstatic.com/s/sourcesanspro/v10/toadOcfmlt9b38dHJxOBGFkQc6VGVFSmCnC_l7QZG60.woff) format('woff');
                 }
             }
-           
+
             body,
             table,
             td,
@@ -55,17 +60,17 @@ crossorigin="anonymous"></script>
                 -ms-text-size-adjust: 100%; /* 1 */
                 -webkit-text-size-adjust: 100%; /* 2 */
             }
-          
+
             table,
             td {
                 mso-table-rspace: 0pt;
                 mso-table-lspace: 0pt;
             }
-           
+
             img {
                 -ms-interpolation-mode: bicubic;
             }
-           
+
             a[x-apple-data-detectors] {
                 font-family: inherit !important;
                 font-size: inherit !important;
@@ -74,7 +79,7 @@ crossorigin="anonymous"></script>
                 color: inherit !important;
                 text-decoration: none !important;
             }
-            
+
             div[style*="margin: 16px 0;"] {
                 margin: 0 !important;
             }
@@ -84,7 +89,7 @@ crossorigin="anonymous"></script>
                 padding: 0 !important;
                 margin: 0 !important;
             }
-          
+
             table {
                 border-collapse: collapse !important;
             }
@@ -117,9 +122,9 @@ crossorigin="anonymous"></script>
                         <li class="nav-item">
                             <a class="nav-link" href="index.html">Home</a>
                         </li>
-                       
+
                     </ul>
-                
+
                 </div>
             </nav>
         </div>
@@ -187,7 +192,7 @@ crossorigin="anonymous"></script>
                                             <table border="0" cellpadding="0" cellspacing="0">
                                                 <tr>
                                                     <td align="center" bgcolor="#1a82e2" style="border-radius: 6px;">
-                                                        <a href="SeccessfullySignUp.jsp" target="_blank" style="display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; background-color: #8b67ce; text-decoration: none; border-radius: 6px;">Verify your email</a>
+                                                        <a href="SuccessfullySignUp.jsp" target="_blank" style="display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; background-color: #8b67ce; text-decoration: none; border-radius: 6px;">Verify your email</a>
                                                     </td>
                                                 </tr>
                                             </table>

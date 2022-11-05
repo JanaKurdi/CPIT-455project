@@ -9,6 +9,8 @@
 <link rel="stylesheet" href="/CPIT-455project/stylesheetSignUp.css"> <!-- multistep form -->
 <script src="js/SignUpjavascript.js"></script><!-- comment -->
 <!-- Favicon-->
+<title>Tagrest website</title>
+<link rel="icon" type="image/x-icon" href="./images/Tagrest.jpg" />
 <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 <!-- Font Awesome icons (free version)-->
 <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
@@ -33,7 +35,7 @@ crossorigin="anonymous"></script>
     <form name="Login_Form" action="VaildateLogin.jsp" method="POST">
         <br><br>
         <span>
-            <label for="email" class="text-small-uppercase"></label>
+            <label for="username" class="text-small-uppercase"></label>
             <input class="text-body" id="username" name="username" type="text" placeholder="Enter Your username">
         </span>
         <br><br><br><br><br>

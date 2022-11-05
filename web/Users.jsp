@@ -36,6 +36,10 @@
 
     </head>
     <body>
+        <% if (session.getAttribute("userAdmin") != null) {
+                Database.Database_connection user = new Database.Database_connection();
+                ResultSet res = user.DisplayAllCustomers();
+        %>
         <div class="header_section">
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -90,8 +94,6 @@
                         </tr>
                     </thead>
                     <%
-                        Database.Database_connection user = new Database.Database_connection();
-                        ResultSet res = user.DisplayAllCustomers();
                         while (res.next()) {%>
                     <tr>
                         <td><%= res.getString("Fname")%></td>
@@ -120,5 +122,12 @@
             <!-- Copyright -->
         </footer>
         <!-- end of copyright section -->       
+        <%
+                user.close();
+            } else {
+                response.sendRedirect("UnauthorizedPage.jsp");
+
+            }
+        %>
     </body>
 </html>

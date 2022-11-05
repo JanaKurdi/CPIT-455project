@@ -37,8 +37,10 @@
     </head>
     <body>
         <%
-            Database.Database_connection user = new Database.Database_connection();
-            ResultSet res = user.CustomerWithOrders();%>
+            if (session.getAttribute("userAdmin") != null) {
+                Database.Database_connection user = new Database.Database_connection();
+                ResultSet res = user.CustomerWithOrders();%>
+
 
         <div class="header_section">
             <div class="container-fluid">
@@ -72,8 +74,7 @@
                                 </button>
                                 <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
                                     <li role="separator" class="divider"></li>
-                                    <li>
-                                        <a class="dropdown-item"href="logout.jsp">
+                                    <li>   <a class="dropdown-item"href="logout.jsp">
                                             <img src="./images/logout.png" width="15" height="15" alt="logout"> Log out</a></li>
                                 </ul>
                             </div>
@@ -130,6 +131,13 @@
             </div>
             <!-- Copyright -->
         </footer>
-        <!-- end of copyright section -->       
+        <!-- end of copyright section -->    
+        <%
+                user.close();
+            } else {
+           response.sendRedirect("UnauthorizedPage.jsp");
+
+            }
+        %>
     </body>
 </html>

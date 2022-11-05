@@ -37,7 +37,9 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
     <body>
-
+        <% if (session.getAttribute("userCustomer") != null) {
+                Database.Database_connection user = new Database.Database_connection();
+        %>
         <!-- navigation bar section  --> 
         <div class="header_section">
             <div class="container-fluid">
@@ -64,7 +66,7 @@
                             <div class="dropdown">
                                 <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <img src="./images/profile.png" alt="profile" width="30" height="30">
-                                    <span class="name"> Admin </span>
+                                    <span class="name">  </span>
                                     <span class="caret"></span>
                                 </button>
                                 <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
@@ -90,17 +92,17 @@
                     <h1> Personal Info </h1>
                     <p> You can change your information by filling the information below: </p>
                     <h4>First name</h4>
-                    <input type="text" class="input "name="fname" value="Enter your first name"><!-- comment -->
+                    <input type="text" class="input "name="fname" placeHolder="Enter your first name"><!-- comment -->
                     <h4>last name</h4>
-                    <input type="text" class="input"name="lname" value="Enter your last name"><!-- comment -->
+                    <input type="text" class="input"name="lname" placeHolder="Enter your last name"><!-- comment -->
                     <h4>Email</h4>
-                    <input type="text" class="input"name="email" value="email@gmail.com"><!-- comment -->
+                    <input type="text" class="input"name="email" placeHolder="email@gmail.com"><!-- comment -->
                     <h4>Phone Number</h4>
-                    <input type="text" name="phone" class="input"value="05########"><!-- comment -->
+                    <input type="text" name="phone" class="input"placeHolder="05########"><!-- comment -->
                     <h4>Password</h4>
-                    <input class="input"name="password" type="text" value="Only Upper-Lower Letters">
+                    <input class="input"name="password" type="text" placeHolder="Only Upper-Lower Letters">
                     <h4>Confirm password</h4>
-                    <input class="input"name="password" type="text" value="Only Upper-Lower Letters">
+                    <input class="input"name="password" type="text" placeHolder="Enter password again">
 
                 </div>
                 <div class="btn">
@@ -121,5 +123,12 @@
             <!-- Copyright -->
         </footer>
         <!-- end of copyright section -->  
+        <%
+              user.close();
+          } else {
+                       response.sendRedirect("UnauthorizedPage.jsp");
+
+          }
+        %>
     </body>
 </html>
