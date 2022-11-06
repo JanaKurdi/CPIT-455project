@@ -97,6 +97,7 @@
                 outline: none;
             }
         </style>
+   </head>
     <body style="background-color: #ffffff;">
 
         <!-- start body -->

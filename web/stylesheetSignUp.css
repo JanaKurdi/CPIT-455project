@@ -22,17 +22,21 @@ input[type=submit] {
 @media (min-width: 768px) {
     input[type=submit] {
         background: #fff;
-        bottom: 1.70rem;/* من هنا اعدل مكان زر البوتن**/
-        left: 6.55rem;
+        bottom: 0rem;/* من هنا اعدل مكان زر البوتن**/
+        left:0rem;
         height: 2.75rem;
-        padding: 0 3rem;
-        position: absolute;
+        width: 9rem;
+        padding-right:10px;
+        position: fixed;
+        margin-bottom:9px;   
+       margin-left: 430px;
     }
 }
 
 input[type=email],
 input[type=text] {
-    height: 2.5rem;
+    height: 2rem;
+    padding:1rem;
     margin: 0 0 0.15rem;/*من هنا احدد المسافه بين الانبت**/
     width: 100%;
 }
@@ -70,9 +74,11 @@ form {
 
 main {
     margin: 30px auto auto;
-    overflow: hidden;
+    padding-top: 20px;
+    overflow:hidden;
     position: relative;
-    width: 90%;
+    height:50%;
+    width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -177,7 +183,58 @@ label {
 main {
     background: #f9f6ed;/**لون المربع الي جوا **/
     border-radius: 0.25rem;
+    padding: 50px 0; 
     box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
+}
+/* i added new method*/
+input {
+    width: 100%;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #999;
+    padding: 6px 30px;
+    font-family: Poppins;
+    box-sizing: border-box; }
+input::-webkit-input-placeholder {
+    color: #999; }
+input::-moz-placeholder {
+    color: #999; }
+input:-ms-input-placeholder {
+    color: #999; }
+input:-moz-placeholder {
+    color: #999; }
+input:focus {
+    border-bottom: 1px solid #222; }
+input:focus::-webkit-input-placeholder {
+    color: #222; }
+input:focus::-moz-placeholder {
+    color: #222; }
+input:focus:-ms-input-placeholder {
+    color: #222; }
+input:focus:-moz-placeholder {
+    color: #222; }
+
+label {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    color: #222; }
+
+.label-has-error {
+    top: 22%; }
+
+label.error {
+    position: relative;
+    background: url("../images/unchecked.gif") no-repeat;
+    background-position-y: 3px;
+    padding-left: 20px;
+    display: block;
+    margin-top: 20px; 
 }
 
 .text-headline {
@@ -215,7 +272,7 @@ main {
     position: relative;
     text-align: center;
     text-transform: uppercase;
-    
+
 }
 
 @media (min-width: 768px) {

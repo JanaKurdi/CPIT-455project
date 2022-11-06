@@ -1,4 +1,4 @@
-package Database;
+package DB;
 
 /**
  *
@@ -26,14 +26,15 @@ public class Database_connection {
 
         } catch (SQLException e) {
         } catch (ClassNotFoundException ex) {
+               System.out.println(" Exception in database connection class");
             Logger.getLogger(Database_connection.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
     // Adding customers
-    public int insertUser(String firstname, String lastname, String username, String Email, String phone, String Address) {
-        sqlQuery = "INSERT INTO Customer(phone ,username,Fname ,lname ,email, Address) VALUES( '" + phone + "', '" + username
-                + "', '" + firstname + "' ,'" + lastname + "','" + Email + "','" + Address + "' );";
+    public int  InsertUser(String firstname, String lastname, String username, String Email, String phone, String Address,String password) {
+        sqlQuery = "INSERT INTO customer(phone ,username,password,Fname ,lname ,email, Address) VALUES( '" + phone + "', '" + username
+                + "', '" + password  + "', '" + firstname + "' ,'" + lastname + "','" + Email + "','" + Address + "' );";
         int i = 0;
         try {
             Statement statment = con1.createStatement();
@@ -46,6 +47,7 @@ public class Database_connection {
         }
         return i;
     }
+    
     /// check is authorized Customer
 
     public String CheckISAuthourizedCustomer(String username, String pass) {
@@ -91,26 +93,6 @@ public class Database_connection {
         }
         return resultSet;
     }
-//       public ResultSet getCustomerInfo(String username) {
-//        sqlQuery = "SELECT * FROM customer WHERE username='" + username + "';";
-//        try{
-//            preparedStmt = con1.prepareStatement(sqlQuery);
-//            resultSet = preparedStmt.executeQuery();
-//        }catch(SQLException e){
-//          System.out.println(e.getMessage());
-//        }
-//        return resultSet;
-//    } 
-//       public ResultSet getAdminInfo(String username) {
-//        sqlQuery = "SELECT * FROM admin WHERE username='" + username + "';";
-//        try{
-//            preparedStmt = con1.prepareStatement(sqlQuery);
-//            resultSet = preparedStmt.executeQuery();
-//        }catch(SQLException e){
-//          System.out.println(e.getMessage());
-//        }
-//        return resultSet;
-//    }
        
     public ResultSet DisplayAllCustomers() {
         sqlQuery = "SELECT Fname, lname, username, email, Address, phone FROM customer;";

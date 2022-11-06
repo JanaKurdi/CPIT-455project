@@ -26,7 +26,7 @@
             String pass = request.getParameter("password");
             if (username != null && username.length() > 3 && username.matches("^[a-zA-Z]+$")) {
                 if (pass != null && pass.length() >= 5) {
-                    Database.Database_connection user1 = new Database.Database_connection();
+                    DB.Database_connection user1 = new DB.Database_connection();
                     String role = user1.CheckISAuthourizedCustomer(username, pass);
                     role = user1.CheckISAuthourizedAdmin(username, pass);
                     if (role != null) {

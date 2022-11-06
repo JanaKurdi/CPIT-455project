@@ -38,7 +38,7 @@
 
     <body>
         <% if (session.getAttribute("userCustomer") != null) {
-                Database.Database_connection user = new Database.Database_connection();
+                DB.Database_connection user = new DB.Database_connection();
         %>
         <!-- navigation bar section  --> 
         <div class="header_section">
@@ -92,13 +92,13 @@
                     <h1> Personal Info </h1>
                     <p> You can change your information by filling the information below: </p>
                     <h4>First name</h4>
-                    <input type="text" class="input "name="fname" placeHolder="Enter your first name"><!-- comment -->
+                    <input type="text" class="input "name="fname" value="Razan" placeHolder="Enter your first name"><!-- comment -->
                     <h4>last name</h4>
-                    <input type="text" class="input"name="lname" placeHolder="Enter your last name"><!-- comment -->
+                    <input type="text" class="input"name="lname" value="Alshaikh" placeHolder="Enter your last name"><!-- comment -->
                     <h4>Email</h4>
-                    <input type="text" class="input"name="email" placeHolder="email@gmail.com"><!-- comment -->
+                    <input type="text" class="input"name="email" value="razan@gmail.com" placeHolder="email@gmail.com"><!-- comment -->
                     <h4>Phone Number</h4>
-                    <input type="text" name="phone" class="input"placeHolder="05########"><!-- comment -->
+                    <input type="text" name="phone" class="input" value="0549226961"placeHolder="05########"><!-- comment -->
                     <h4>Password</h4>
                     <input class="input"name="password" type="text" placeHolder="Only Upper-Lower Letters">
                     <h4>Confirm password</h4>

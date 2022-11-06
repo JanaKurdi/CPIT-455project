@@ -37,7 +37,7 @@
     </head>
     <body>
         <% if (session.getAttribute("userAdmin") != null) {
-                Database.Database_connection user = new Database.Database_connection();
+                DB.Database_connection user = new DB.Database_connection();
                 ResultSet res = user.DisplayAllCustomers();
         %>
         <div class="header_section">
@@ -56,21 +56,18 @@
                                 <a class="nav-link" href="AdminPage1.jsp">Orders</a>
                             </li>
                         </ul>
-                        <ul class="nav navbar-nav navbar-right">
+                       <ul class="nav navbar-nav navbar-right">
                             <div class="dropdown">
                                 <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <img src="./images/profile.png" alt="profile" width="30" height="30">
                                     <span class="name"> Admin </span>
-                                    <i class="fa fa-chevron-down fa_custom fa-2x" aria-hidden="true"></i>
+                                    <i class="chevron-down" aria-hidden="true"></i>
                                     <span class="caret"></span>
                                 </button>
                                 <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
-                                    <li> <a class="dropdown-item">
-                                            <img src="./images/account.png" width="15" height="15" alt="account" class="rounded-right"  href="profile.jsp"> My Account</a></li>
                                     <li role="separator" class="divider"></li>
-                                    <li>
-                                        <a class="dropdown-item">
-                                            <img src="./images/logout.png" width="15" height="15" alt="logout" class="rounded-right" href="logout.jsp"> Log out</a></li>
+                                    <li>   <a class="dropdown-item"href="logout.jsp">
+                                            <img src="./images/logout.png" width="15" height="15" alt="logout"> Log out</a></li>
                                 </ul>
                             </div>
                         </ul>

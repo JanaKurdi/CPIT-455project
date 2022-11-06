@@ -177,7 +177,7 @@ crossorigin="anonymous"></script>
                         <!-- start copy -->
                         <tr>
                             <td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
-                                <p style="margin: 0;">You have entered renad234@gmail.com as the email address fro your account.
+                                <p style="margin: 0;">You have entered r######@gmail.com as the email address for your account.
                                     Please verify this email address by clicking button below.</p>
                             </td>
                         </tr>

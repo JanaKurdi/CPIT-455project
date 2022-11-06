@@ -38,8 +38,9 @@
     <body>
         <%
             if (session.getAttribute("userAdmin") != null) {
-                Database.Database_connection user = new Database.Database_connection();
-                ResultSet res = user.CustomerWithOrders();%>
+                DB.Database_connection user = new DB.Database_connection();
+                ResultSet res = user.CustomerWithOrders();
+                                           %>
 
 
         <div class="header_section">

@@ -100,7 +100,7 @@
 
     <body style="background-color: #ffffff;">
         <% if (session.getAttribute("userCustomer") != null) {
-                Database.Database_connection user = new Database.Database_connection();
+                DB.Database_connection user = new DB.Database_connection();
         %>
         <!-- start body -->
         <table border="0" cellpadding="0" cellspacing="0" width="100%">

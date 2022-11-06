@@ -3,15 +3,16 @@
     Created on : Oct 30, 2022, 6:48:24 PM
     Author     : Jana
 --%>
-<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.*"%>
+<%@page import="com.mysql.jdbc.Driver"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
-         meta charset="UTF-8">
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-       cccc
+        <title>Tagrest website</title>
         <!-- bootstrap css -->
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
         <!-- style css -->
@@ -21,59 +22,75 @@
     </head>
     <body>
         <%
-            String FirstName = request.getParameter("FirstName");
-            String LasttName = request.getParameter("LasttName");
-            String email = request.getParameter("email");
-            String password = request.getParameter("password");
-            String confPassword = request.getParameter("confPassword");
-            String phone = request.getParameter("phone");
+            try {
+                DB.Database_connection user1 = new DB.Database_connection();
+                RequestDispatcher dispatcher = null;
+                String FirstName = request.getParameter("Fname");
+                String LastName = request.getParameter("lname");
+                String username = request.getParameter("username");
+                String Address = request.getParameter("Address");
+                String email = request.getParameter("email");
+                String password = request.getParameter("password");
+                String confPassword = request.getParameter("re-password");
+                String phone = request.getParameter("phone");
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                if (FirstName != null && FirstName.length() > 2 && FirstName.matches("^[a-zA-Z]+$")) {
+                    if (LastName != null && LastName.length() > 2 && LastName.matches("^[a-zA-Z]+$")) {
+                        if (username != null && username.length() > 3 && username.matches("^[a-zA-Z]+$")) {
+                            if (email != null && email.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$")) {
+                                if (password != null && password.length() >= 5) {
+                                    if (confPassword.matches(password)) {
+                                        if (phone != null && phone.length() == 10 && phone.matches("(05)?[0,3,4,5,6,9][0-9]{7}")) {
+                                            int result = user1.InsertUser(FirstName, LastName, username, email, phone, Address, password);
+                                            if (result == 1) {
+                                                response.sendRedirect("SignUpConfirmation.jsp");
+                                            } else {
+                                                request.setAttribute("status", "invalidInsert");
+                                                dispatcher = request.getRequestDispatcher("Signup.jsp");
+                                                dispatcher.forward(request, response);
+                                            }
 
-            if (FirstName != null && FirstName.length() > 2 && FirstName.matches("^[a-zA-Z]+$")) {
-                if (LasttName != null && LasttName.length() > 2 && LasttName.matches("^[a-zA-Z]+$")) {
-                    if (email != null && email.matches("^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$")) {
-                        if (password != null && password.length() >= 5) {
-                            if (confPassword == password) {
-                                if (phone != null && phone.length() == 10 && phone.matches("(05)?[0,3,4,5,6,9][0-9]{7}")) {
-                                    Database.Database_connection user = new Database.Database_connection();
-                                    ResultSet result = user.insertUser(FirstName, LasttName, email, password, phone);
-                                    if (result.next()) {
-                                        out.print("Welcome " + FirstName + " " + LasttName);
-                                        out.println("<a href='SignUpConfirmation.jsp'> Show </a>");
-                                        response.sendRedirect("SignUpConfirmation.jsp");
+                                        } else {
+                                            request.setAttribute("status", "invalidPhone");
+                                            dispatcher = request.getRequestDispatcher("Signup.jsp");
+                                            dispatcher.forward(request, response);
 
+                                        }
                                     } else {
-                                        out.print(FirstName + " " + LasttName + " you enterd wrong entry ");
+                                        request.setAttribute("status", "NotIdentical");
+                                        dispatcher = request.getRequestDispatcher("Signup.jsp");
+                                        dispatcher.forward(request, response);
                                     }
 
                                 } else {
-                                    out.print("hone number must be 10 digits and starts with (050 , 053 , 054 , 055 , 056 , 059)");
-                                    out.print("<a href='Signup.jsp'> Restart </a>");
+                                    request.setAttribute("status", "invalidPassword");
+                                    dispatcher = request.getRequestDispatcher("Signup.jsp");
+                                    dispatcher.forward(request, response);
                                 }
+
                             } else {
-                                out.print("it is not match your with yor password");
-                                out.print("<a href='Signup.jsp'> Restart </a>");
+                                request.setAttribute("status", "invalidEmail");
+                                dispatcher = request.getRequestDispatcher("Signup.jsp");
+                                dispatcher.forward(request, response);
                             }
-
                         } else {
-                            out.print(" Your password is too weak");
-                            out.print("<a href='Signup.jsp'> Restart </a>");
+                                request.setAttribute("status", "invalidUsername");
+                                dispatcher = request.getRequestDispatcher("Signup.jsp");
+                                dispatcher.forward(request, response);
                         }
-
                     } else {
-                        out.print(" Your email is not correct");
-                        out.print("<a href='Signup.jsp'> Restart </a>");
+                        request.setAttribute("status", "ivalidFLname");
+                        dispatcher = request.getRequestDispatcher("Signup.jsp");
+                        dispatcher.forward(request, response);
                     }
                 } else {
-                    out.print(" first name or lastname is not correct");
-                    out.print("<a href='Signup.jsp'> Restart </a>");
+                    request.setAttribute("status", "AllInvalid");
+                    dispatcher = request.getRequestDispatcher("Signup.jsp");
+                    dispatcher.forward(request, response);
                 }
-            } else {
-                out.print("Please enter correct data !!");
-                out.print("<a href='Signup.jsp'> Restart </a>");
-
+            } catch (Exception e) {
+                out.println(e.getMessage());
             }
-
         %>
-
     </body>
 </html>

@@ -34,7 +34,7 @@ crossorigin="anonymous"></script>
     </head>
     <body>
         <% if (session.getAttribute("userCustomer") != null) {
-                Database.Database_connection user = new Database.Database_connection();
+                DB.Database_connection user = new DB.Database_connection();
         %>
 
         <div class="header_section">
