@@ -51,7 +51,7 @@ public class Database_connection {
     /// check is authorized Customer
 
     public String CheckISAuthourizedCustomer(String username, String pass) {
-        sqlQuery = "SELECT * FROM Customer WHERE username='" + username + "' AND password='" + pass + "';";
+        sqlQuery = "SELECT * FROM Customer WHERE username='" + username + "' AND Password='" + pass + "';";
         try {
             preparedStmt = con1.prepareStatement(sqlQuery);
             resultSet = preparedStmt.executeQuery();
@@ -69,7 +69,7 @@ public class Database_connection {
     /// check is authorized Admin
 
     public String CheckISAuthourizedAdmin(String username, String pass) {
-        sqlQuery = "SELECT * FROM admin WHERE username='" + username + "' AND password='" + pass + "';";
+        sqlQuery = "SELECT * FROM admin WHERE username='" + username + "' AND Password='" + pass + "';";
         try {
             preparedStmt = con1.prepareStatement(sqlQuery);
             resultSet = preparedStmt.executeQuery();
@@ -85,7 +85,7 @@ public class Database_connection {
     }
 
     public ResultSet CustomerWithOrders() {
-        sqlQuery = "SELECT * FROM Customers_orders";
+        sqlQuery = "SELECT * FROM Customers_orders;";
         try {
             preparedStmt = con1.prepareStatement(sqlQuery);
             resultSet = preparedStmt.executeQuery();

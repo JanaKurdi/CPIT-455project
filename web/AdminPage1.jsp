@@ -104,7 +104,7 @@
 
                     <%   while (res.next()) {%>
                     <tr>
-                        <td><%= res.getString("OrderNum")%></td>
+                        <td><%= res.getString("Order_number")%></td>
                         <td><%= res.getString("Fname")%></td>
                         <td><%= res.getString("lname")%></td>
                         <td><%= res.getString("email")%></td>

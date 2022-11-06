@@ -34,30 +34,29 @@ crossorigin="anonymous"></script>
         <% if (session.getAttribute("userCustomer") != null) {
                 DB.Database_connection user = new DB.Database_connection();
         %>
-                    <div class="header_section">
-                <div class="container-fluid">
-                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                        <img src="./images/Tagrest.jpg" width="60" height="60" class=" rounded-circle d-inline-block align-top text-light" alt="">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="header_section">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <img src="./images/Tagrest.jpg" width="60" height="60" class=" rounded-circle d-inline-block align-top text-light" alt="">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-                            <ul class="navbar-nav mr-auto">
-                                <li class="nav-item">
-                                    <a class="navbar-brand" href="#">Tagrest</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="index.html">Home</a>
-                                </li>
-                            </ul>
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="navbar-brand" href="#">Tagrest</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                        </ul>
 
-                        </div>
-                    </nav>
-                </div>
+                    </div>
+                </nav>
             </div>
-            <br>
-        <section class="h-100 h-custom" style="background:linear-gradient(#1f75c1,#aed4f5);">
+        </div>
+       <section class="h-100 h-custom" style="background:linear-gradient(#1f75c1,#aed4f5);">
             <div class="container h-100 py-5">
                 <div class="row d-flex justify-content-center align-items-center h-100">
                     <div class="col">
@@ -234,6 +233,34 @@ crossorigin="anonymous"></script>
                     </div>
                 </div>
             </div>
+
+           <br>            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+                       <br>
+
+                                   <br>
+
 
             <footer class="text-center text-white">
                 <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.1);">
