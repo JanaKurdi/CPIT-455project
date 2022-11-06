@@ -35,7 +35,7 @@ crossorigin="anonymous"></script>
             <div class="headline">
                 <h2 class="text-headline">SIGN UP</h2>
             </div>
-            <form name="Sign_Form" action="ValidateSignup.jsp" method="POST">
+            <form name="Sign_Form" action="SignUpConfirmation.jsp" method="POST">
                 <span>
                     <label for="firstname" class="text-small-uppercase"></label>
                     <input class="text-body" id="firstname" name="Fname" type="text" placeholder="    Enter your First name" required="required" >
