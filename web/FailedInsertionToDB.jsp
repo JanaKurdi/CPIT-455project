@@ -1,9 +1,8 @@
 <%-- 
-    Document   : FailedSignUp
-    Created on : Nov 5, 2022, 9:27:29 PM
-    Author     : Razan Alshaikh
+    Document   : FailedInsertionToDB
+    Created on : Nov 6, 2022, 6:06:44 PM
+    Author     : renad
 --%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -153,13 +152,10 @@
                             <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
                                 <tr>
                                     <td align="center" bgcolor="#ffffff" style="padding: 36px 24px 0; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; border-top: 3px solid #d4dadf;">
-                                        <h1 style="margin: 0; font-size: 32px; font-weight: 700; letter-spacing: -1px; line-height: 48px;"> You have assigned invalid data</h1>
-                                        <h3>  Please make sure that:   </h3>
-                                         <h7> First name & Last name must be only characters</h7><br>
-                                         <h7> Email must be with  correct format #####@#### </h7><br>
-                                         <h7> Username length must be more than 3 and only characters</h7><br>
-                                         <h7> Password length must be more than 5 </h7><br>
-                                         <h7> Confirm password must be identical </h7>
+                                        <h1 style="margin: 0; font-size: 32px; font-weight: 700; letter-spacing: -1px; line-height: 48px;">Account exists </h1>
+                                        <h4>oops! our records show you already have an account</h4>
+                                        <h4>Please Login</h4>
+                                        
                                     </td>
                                 </tr>
                             </table>
@@ -183,7 +179,7 @@
                                                     <table border="0" cellpadding="0" cellspacing="0">
                                                         <tr>
                                                             <td align="center" bgcolor="#1a82e2" style="border-radius: 6px;">
-                                                                 <a href="Signup.jsp" target="_blank" style="display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; background-color: #48ca5f; text-decoration: none; border-radius: 6px;">Sign up</a>
+                                                                <a href="Login.jsp" target="_blank" style="display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; background-color: #48ca5f; text-decoration: none; border-radius: 6px;">Login</a>
                                                             </td>
                                                         </tr>
                                                     </table>
@@ -212,4 +208,3 @@
         <!-- end of copyright section -->
     </body>
 </html>
-

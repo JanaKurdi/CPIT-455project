@@ -46,7 +46,6 @@
                     }
                 } else {
                     //page for redirect
-                   // out.print(" username or pass not correct");
                     response.sendRedirect("WrongEntry.jsp");
                 }
             } else {

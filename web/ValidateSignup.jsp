@@ -21,10 +21,9 @@
         <link rel="icon" type="image/x-icon" href="./images/Tagrest.jpg" />
     </head>
     <body>
-        <%
+        <%      
             try {
                 DB.Database_connection user1 = new DB.Database_connection();
-                RequestDispatcher dispatcher = null;
                 String FirstName = request.getParameter("Fname");
                 String LastName = request.getParameter("lname");
                 String username = request.getParameter("username");
@@ -45,48 +44,38 @@
                                             if (result == 1) {
                                                 response.sendRedirect("SignUpConfirmation.jsp");
                                             } else {
-                                                request.setAttribute("status", "invalidInsert");
-                                                dispatcher = request.getRequestDispatcher("Signup.jsp");
-                                                dispatcher.forward(request, response);
+                                                response.sendRedirect("FailedInsertionToDB.jsp");
                                             }
 
                                         } else {
-                                            request.setAttribute("status", "invalidPhone");
-                                            dispatcher = request.getRequestDispatcher("Signup.jsp");
-                                            dispatcher.forward(request, response);
+                                            response.sendRedirect("FailedSignup.jsp");
 
                                         }
                                     } else {
-                                        request.setAttribute("status", "NotIdentical");
-                                        dispatcher = request.getRequestDispatcher("Signup.jsp");
-                                        dispatcher.forward(request, response);
+                                        response.sendRedirect("FailedSignup.jsp");
+
                                     }
 
                                 } else {
-                                    request.setAttribute("status", "invalidPassword");
-                                    dispatcher = request.getRequestDispatcher("Signup.jsp");
-                                    dispatcher.forward(request, response);
+                                    response.sendRedirect("FailedSignup.jsp");
+
                                 }
 
                             } else {
-                                request.setAttribute("status", "invalidEmail");
-                                dispatcher = request.getRequestDispatcher("Signup.jsp");
-                                dispatcher.forward(request, response);
+                                response.sendRedirect("FailedSignup.jsp");
+
                             }
                         } else {
-                                request.setAttribute("status", "invalidUsername");
-                                dispatcher = request.getRequestDispatcher("Signup.jsp");
-                                dispatcher.forward(request, response);
+                            response.sendRedirect("FailedSignup.jsp");
+
                         }
                     } else {
-                        request.setAttribute("status", "ivalidFLname");
-                        dispatcher = request.getRequestDispatcher("Signup.jsp");
-                        dispatcher.forward(request, response);
+                        response.sendRedirect("FailedSignup.jsp");
+
                     }
                 } else {
-                    request.setAttribute("status", "AllInvalid");
-                    dispatcher = request.getRequestDispatcher("Signup.jsp");
-                    dispatcher.forward(request, response);
+                    response.sendRedirect("FailedSignup.jsp");
+
                 }
             } catch (Exception e) {
                 out.println(e.getMessage());
@@ -94,3 +83,4 @@
         %>
     </body>
 </html>
+
