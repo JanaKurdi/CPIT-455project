@@ -10,7 +10,7 @@ and open the template in the editor.
 @media (min-width: 1025px) {
     .h-custom {
         height: 100vh;
-            background: white;
+ background: white;
     }
 }
 .header_section {

@@ -115,7 +115,7 @@
 
                             <ul class="navbar-nav mr-auto">
                                 <li class="nav-item">
-                                    <a class="navbar-brand" href="#">Tagrest</a>
+                                    <a class="navbar-brand" href="index.html">Tagrest</a>
                                 </li>
                             </ul>
                         </div>
@@ -150,22 +150,14 @@
                         <tr>
                             <td align="center" bgcolor="#ffffff" style="padding: 36px 24px 0; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; border-top: 3px solid #d4dadf;">
                                 <h1 style="margin: 0; font-size: 32px; font-weight: 700; letter-spacing: -1px; line-height: 48px;">Thank You!</h1>
+                                    <h4>Payment done Successfully </h4>
+                                    <h6>Please click to return to home page</h6>
                             </td>
                         </tr>
                     </table>
 
                 </td>
             </tr>
-            <td align="center" bgcolor="#ffffff">
-                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
-                    <tr>
-                        <td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
-                            <p style="margin: 0;">Payment done Successfully you will be redirected to the home page shortly or click here to return to home page. </p>
-                        </td>
-                    </tr>
-                    <!-- end hero -->
-                </table>
-            </td>
             <!-- start copy block -->
             <tr>
                 <td align="center" bgcolor="#ffffff">

@@ -117,7 +117,7 @@ crossorigin="anonymous"></script>
 
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="navbar-brand" href="#">Tagrest</a>
+                           <a class="navbar-brand" href="index.html">Tagrest</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="index.html">Home</a>

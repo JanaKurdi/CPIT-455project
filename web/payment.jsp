@@ -45,7 +45,7 @@ crossorigin="anonymous"></script>
 
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item">
-                                <a class="navbar-brand" href="#">Tagrest</a>
+                                 <a class="navbar-brand" href="index.html">Tagrest</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="index.html">Home</a>
@@ -56,7 +56,7 @@ crossorigin="anonymous"></script>
                 </nav>
             </div>
         </div>
-       <section class="h-100 h-custom" style="background:linear-gradient(#1f75c1,#aed4f5);">
+        <section class="h-100 h-custom" style="background:linear-gradient(#1f75c1,#aed4f5);">
             <div class="container h-100 py-5">
                 <div class="row d-flex justify-content-center align-items-center h-100">
                     <div class="col">
@@ -234,7 +234,7 @@ crossorigin="anonymous"></script>
                 </div>
             </div>
 
-           <br>            <br>
+            <br>            <br>
             <br>
             <br>
             <br>
@@ -247,19 +247,10 @@ crossorigin="anonymous"></script>
             <br>
             <br>
             <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-
-                       <br>
-
-                                   <br>
+            <br><br>
+            <br><br>
+            <br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br>
 
 
             <footer class="text-center text-white">

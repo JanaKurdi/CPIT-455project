@@ -44,7 +44,7 @@ CREATE TABLE `customer` (
 
 LOCK TABLES `customer` WRITE;
 /*!40000 ALTER TABLE `customer` DISABLE KEYS */;
-INSERT INTO `customer` VALUES ('Lina','Alshaikh','Linaalsh','abcdefg','linaalshaikh2002@gmail.com','Jeddah','0503589589','12'),('Razan','Alshaikh','razanalsh','a@1906813','RazanAlshaikh2000@gmail.com','Jeddah','0549226961','11');
+INSERT INTO `customer` VALUES ('Deema','Alshaikh','deemalsh','a@12345','deema@gmail.com','Jeddah','0549934245',NULL),('Lina','Alshaikh','Linaalsh','abcdefg','linaalshaikh2002@gmail.com','Jeddah','0503589589','12'),('Razan','Alshaikh','razanalsh','a@1906813','RazanAlshaikh2000@gmail.com','Jeddah','0549226961','11'),('Renad','Ghaleb','RenadSG','abcdefg','renad@gmail.com','Jeddah','0540303033','13');
 /*!40000 ALTER TABLE `customer` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -57,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-10-28  5:51:28
+-- Dump completed on 2022-11-06 20:49:59

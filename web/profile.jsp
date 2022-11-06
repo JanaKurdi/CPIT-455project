@@ -52,7 +52,7 @@
 
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item">
-                                <a class="navbar-brand" href="#">Tagrest</a>
+                             <a class="navbar-brand" href="index.html">Tagrest</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="index.html">Home</a>
@@ -97,6 +97,8 @@
                     <input type="text" class="input"name="lname" value="Alshaikh" placeHolder="Enter your last name"><!-- comment -->
                     <h4>Email</h4>
                     <input type="text" class="input"name="email" value="razan@gmail.com" placeHolder="email@gmail.com"><!-- comment -->
+                    <h4>Address </h4>
+                    <input class="input"name="Address" type="text" value="KSA Jeddah"placeHolder="Enter your Address ">
                     <h4>Phone Number</h4>
                     <input type="text" name="phone" class="input" value="0549226961"placeHolder="05########"><!-- comment -->
                     <h4>Password</h4>
